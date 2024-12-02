@@ -45,6 +45,7 @@ def process_packet(packet, i):
     
     return packet_info
 
+
 # Main function to capture and log packets continuously
 def capture_packets():
     try:
