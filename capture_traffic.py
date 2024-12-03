@@ -2,6 +2,9 @@ import pyshark
 import datetime
 import logging
 
+
+
+
 # Configure logging to capture detailed logs of packet captures
 logging.basicConfig(
     filename='/home/archuser/Documents/IDS-Project/intrusion-detection-system-based-on-custom-rules/capture_log.txt',
