@@ -1,0 +1,4 @@
+Port Scan Detection, port_scan, 10
+DDoS Detection, ddos, 100
+Brute-Force Login Detection, brute_force, 5
+DoS Detection, dos, 1000

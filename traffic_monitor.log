@@ -166,3 +166,380 @@ Traceback (most recent call last):
   File "/home/archuser/Documents/IDS-Project/intrusion-detection-system-based-on-custom-rules/.venv/lib/python3.12/site-packages/pyshark/tshark/output_parser/base_parser.py", line 22, in get_packets_from_stream
     raise EOFError()
 EOFError
+INFO:root:Packet - Source: 192.168.100.150, Dest: 224.0.0.251, Protocol: UDP
+INFO:root:Packet - Source: 192.168.100.150, Dest: 224.0.0.22, Protocol: None
+INFO:root:Packet - Source: 192.168.100.237, Dest: 224.0.0.251, Protocol: UDP
+INFO:root:Packet - Source: 192.168.100.150, Dest: 224.0.0.251, Protocol: UDP
+INFO:root:Packet - Source: 192.168.100.5, Dest: 224.0.0.251, Protocol: UDP
+INFO:root:Packet - Source: 192.168.100.150, Dest: 224.0.0.251, Protocol: UDP
+INFO:root:Packet - Source: 192.168.100.150, Dest: 224.0.0.22, Protocol: None
+INFO:root:Packet - Source: 192.168.100.150, Dest: 224.0.0.22, Protocol: None
+INFO:root:Packet - Source: 192.168.100.150, Dest: 224.0.0.22, Protocol: None
+INFO:root:Packet - Source: 192.168.100.150, Dest: 224.0.0.251, Protocol: UDP
+INFO:root:Packet - Source: 192.168.100.5, Dest: 224.0.0.251, Protocol: UDP
+INFO:root:Packet - Source: 192.168.100.150, Dest: 224.0.0.251, Protocol: UDP
+INFO:root:Packet - Source: 192.168.100.150, Dest: 224.0.0.22, Protocol: None
+INFO:root:Packet - Source: 192.168.100.150, Dest: 224.0.0.22, Protocol: None
+INFO:root:Packet - Source: 192.168.100.150, Dest: 224.0.0.251, Protocol: UDP
+INFO:root:Packet - Source: 192.168.100.150, Dest: 224.0.0.22, Protocol: None
+INFO:root:Packet - Source: 192.168.100.237, Dest: 224.0.0.251, Protocol: UDP
+INFO:root:Packet - Source: 192.168.100.150, Dest: 224.0.0.251, Protocol: UDP
+INFO:root:Packet - Source: 192.168.100.150, Dest: 224.0.0.251, Protocol: UDP
+INFO:root:Packet - Source: 192.168.100.5, Dest: 224.0.0.251, Protocol: UDP
+INFO:root:Packet - Source: 192.168.100.5, Dest: 224.0.0.251, Protocol: UDP
+INFO:root:Packet - Source: 192.168.100.150, Dest: 224.0.0.22, Protocol: None
+INFO:root:Packet - Source: 192.168.100.150, Dest: 224.0.0.251, Protocol: UDP
+INFO:root:Packet - Source: 192.168.100.150, Dest: 224.0.0.22, Protocol: None
+INFO:root:Packet - Source: 192.168.100.150, Dest: 224.0.0.251, Protocol: UDP
+INFO:root:Packet - Source: 192.168.100.150, Dest: 239.255.255.250, Protocol: UDP
+INFO:root:Packet - Source: 192.168.100.150, Dest: 224.0.0.22, Protocol: None
+INFO:root:Packet - Source: 192.168.100.150, Dest: 239.255.255.250, Protocol: UDP
+INFO:root:Packet - Source: 192.168.100.150, Dest: 224.0.0.251, Protocol: UDP
+INFO:root:Packet - Source: 192.168.100.150, Dest: 224.0.0.22, Protocol: None
+INFO:root:Packet - Source: 192.168.100.150, Dest: 224.0.0.22, Protocol: None
+INFO:root:Packet - Source: 192.168.100.5, Dest: 224.0.0.251, Protocol: UDP
+INFO:root:Packet - Source: 192.168.100.150, Dest: 224.0.0.251, Protocol: UDP
+INFO:root:Packet - Source: 192.168.100.5, Dest: 224.0.0.251, Protocol: UDP
+INFO:root:Packet - Source: 192.168.100.5, Dest: 224.0.0.251, Protocol: UDP
+INFO:root:Packet - Source: 192.168.100.150, Dest: 224.0.0.251, Protocol: UDP
+INFO:root:Packet - Source: 192.168.100.150, Dest: 224.0.0.22, Protocol: None
+INFO:root:Packet - Source: 192.168.100.150, Dest: 224.0.0.22, Protocol: None
+INFO:root:Packet - Source: 192.168.100.150, Dest: 224.0.0.22, Protocol: None
+INFO:root:Packet - Source: 192.168.100.150, Dest: 192.168.100.239, Protocol: UDP
+INFO:root:Packet - Source: 192.168.100.239, Dest: 192.168.100.150, Protocol: None
+INFO:root:Packet - Source: 192.168.100.150, Dest: 192.168.100.255, Protocol: UDP
+INFO:root:Packet - Source: 192.168.100.150, Dest: 224.0.0.251, Protocol: UDP
+INFO:root:Packet - Source: 192.168.100.150, Dest: 224.0.0.22, Protocol: None
+INFO:root:Packet - Source: 192.168.100.150, Dest: 224.0.0.22, Protocol: None
+INFO:root:Packet - Source: 192.168.100.150, Dest: 224.0.0.22, Protocol: None
+INFO:root:Packet - Source: 192.168.100.150, Dest: 224.0.0.251, Protocol: UDP
+INFO:root:Packet - Source: 192.168.100.150, Dest: 224.0.0.22, Protocol: None
+INFO:root:Packet - Source: 192.168.100.150, Dest: 224.0.0.22, Protocol: None
+INFO:root:Packet - Source: 192.168.100.150, Dest: 224.0.0.251, Protocol: UDP
+INFO:root:Packet - Source: 192.168.100.150, Dest: 224.0.0.22, Protocol: None
+INFO:root:Packet - Source: 192.168.100.150, Dest: 224.0.0.251, Protocol: UDP
+INFO:root:Packet - Source: 192.168.100.150, Dest: 224.0.0.22, Protocol: None
+INFO:root:Packet - Source: 192.168.100.150, Dest: 224.0.0.22, Protocol: None
+INFO:root:Packet - Source: 192.168.100.150, Dest: 224.0.0.251, Protocol: UDP
+INFO:root:Packet - Source: 192.168.100.150, Dest: 224.0.0.22, Protocol: None
+INFO:root:Packet - Source: 192.168.100.239, Dest: 91.108.56.177, Protocol: TCP
+INFO:root:Packet - Source: 192.168.100.150, Dest: 239.255.255.250, Protocol: UDP
+INFO:root:Packet - Source: 192.168.100.150, Dest: 239.255.255.250, Protocol: UDP
+INFO:root:Packet - Source: 192.168.100.150, Dest: 224.0.0.251, Protocol: UDP
+INFO:root:Packet - Source: 192.168.100.237, Dest: 224.0.0.251, Protocol: UDP
+INFO:root:Packet - Source: 192.168.100.150, Dest: 224.0.0.251, Protocol: UDP
+INFO:root:Packet - Source: 91.108.56.177, Dest: 192.168.100.239, Protocol: TCP
+INFO:root:Packet - Source: 91.108.56.177, Dest: 192.168.100.239, Protocol: TCP
+INFO:root:Packet - Source: 192.168.100.239, Dest: 91.108.56.177, Protocol: TCP
+INFO:root:Packet - Source: 192.168.100.5, Dest: 224.0.0.251, Protocol: UDP
+INFO:root:Packet - Source: 192.168.100.150, Dest: 224.0.0.22, Protocol: None
+INFO:root:Packet - Source: 192.168.100.150, Dest: 224.0.0.251, Protocol: UDP
+INFO:root:Packet - Source: 192.168.100.150, Dest: 224.0.0.22, Protocol: None
+INFO:root:Packet - Source: 192.168.100.150, Dest: 224.0.0.22, Protocol: None
+INFO:root:Packet - Source: 192.168.100.150, Dest: 224.0.0.251, Protocol: UDP
+INFO:root:Packet - Source: 192.168.100.150, Dest: 224.0.0.22, Protocol: None
+INFO:root:Packet - Source: 192.168.100.239, Dest: 104.18.32.47, Protocol: TCP
+INFO:root:Packet - Source: 192.168.100.239, Dest: 192.168.100.1, Protocol: UDP
+INFO:root:Packet - Source: 192.168.100.239, Dest: 192.168.100.1, Protocol: UDP
+INFO:root:Packet - Source: 104.18.32.47, Dest: 192.168.100.239, Protocol: TCP
+INFO:root:Packet - Source: 192.168.100.239, Dest: 104.18.32.47, Protocol: TCP
+INFO:root:Packet - Source: 192.168.100.150, Dest: 192.168.100.239, Protocol: UDP
+INFO:root:Packet - Source: 192.168.100.239, Dest: 192.168.100.150, Protocol: None
+INFO:root:Packet - Source: 192.168.100.1, Dest: 192.168.100.239, Protocol: UDP
+INFO:root:Packet - Source: 192.168.100.1, Dest: 192.168.100.239, Protocol: UDP
+INFO:root:Packet - Source: 192.168.100.239, Dest: 20.37.198.118, Protocol: TCP
+INFO:root:Packet - Source: 192.168.100.150, Dest: 192.168.100.255, Protocol: UDP
+INFO:root:Packet - Source: 192.168.100.150, Dest: 224.0.0.22, Protocol: None
+INFO:root:Packet - Source: 20.37.198.118, Dest: 192.168.100.239, Protocol: TCP
+INFO:root:Packet - Source: 192.168.100.239, Dest: 20.37.198.118, Protocol: TCP
+INFO:root:Packet - Source: 192.168.100.239, Dest: 20.37.198.118, Protocol: TCP
+INFO:root:Packet - Source: 192.168.100.150, Dest: 224.0.0.251, Protocol: UDP
+INFO:root:Packet - Source: 192.168.100.150, Dest: 224.0.0.22, Protocol: None
+INFO:root:Packet - Source: 20.37.198.118, Dest: 192.168.100.239, Protocol: TCP
+INFO:root:Packet - Source: 192.168.100.239, Dest: 20.37.198.118, Protocol: TCP
+INFO:root:Packet - Source: 192.168.100.239, Dest: 20.37.198.118, Protocol: TCP
+INFO:root:Packet - Source: 20.37.198.118, Dest: 192.168.100.239, Protocol: TCP
+INFO:root:Packet - Source: 20.37.198.118, Dest: 192.168.100.239, Protocol: TCP
+INFO:root:Packet - Source: 192.168.100.239, Dest: 20.37.198.118, Protocol: TCP
+INFO:root:Packet - Source: 20.37.198.118, Dest: 192.168.100.239, Protocol: TCP
+INFO:root:Packet - Source: 192.168.100.239, Dest: 20.37.198.118, Protocol: TCP
+INFO:root:Packet - Source: 192.168.100.239, Dest: 20.37.198.118, Protocol: TCP
+INFO:root:Packet - Source: 192.168.100.150, Dest: 224.0.0.22, Protocol: None
+INFO:root:Packet - Source: 20.37.198.118, Dest: 192.168.100.239, Protocol: TCP
+ERROR:asyncio:Task exception was never retrieved
+future: <Task finished name='Task-296' coro=<TsharkXmlParser.get_packets_from_stream() done, defined at /home/archuser/Documents/IDS-Project/intrusion-detection-system-based-on-custom-rules/.venv/lib/python3.12/site-packages/pyshark/tshark/output_parser/tshark_xml.py:24> exception=EOFError()>
+Traceback (most recent call last):
+  File "/home/archuser/Documents/IDS-Project/intrusion-detection-system-based-on-custom-rules/capture_traffic.py", line 25, in <module>
+    start_capture()
+  File "/home/archuser/Documents/IDS-Project/intrusion-detection-system-based-on-custom-rules/capture_traffic.py", line 15, in start_capture
+    for packet in capture.sniff_continuously():
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/archuser/Documents/IDS-Project/intrusion-detection-system-based-on-custom-rules/.venv/lib/python3.12/site-packages/pyshark/capture/capture.py", line 221, in _packets_from_tshark_sync
+    packet, data = self.eventloop.run_until_complete(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/asyncio/base_events.py", line 674, in run_until_complete
+    self.run_forever()
+  File "/usr/lib/python3.12/asyncio/base_events.py", line 641, in run_forever
+    self._run_once()
+  File "/usr/lib/python3.12/asyncio/base_events.py", line 1948, in _run_once
+    event_list = self._selector.select(timeout)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/selectors.py", line 468, in select
+    fd_event_list = self._selector.poll(timeout, max_ev)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/archuser/Documents/IDS-Project/intrusion-detection-system-based-on-custom-rules/.venv/lib/python3.12/site-packages/pyshark/tshark/output_parser/tshark_xml.py", line 27, in get_packets_from_stream
+    return await super().get_packets_from_stream(stream, existing_data, got_first_packet=got_first_packet)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/archuser/Documents/IDS-Project/intrusion-detection-system-based-on-custom-rules/.venv/lib/python3.12/site-packages/pyshark/tshark/output_parser/base_parser.py", line 22, in get_packets_from_stream
+    raise EOFError()
+EOFError
+INFO:root:Packet - Source: 192.168.100.239, Dest: 42.99.140.155, Protocol: TCP
+INFO:root:Packet - Source: 42.99.140.155, Dest: 192.168.100.239, Protocol: TCP
+INFO:root:Packet - Source: 192.168.100.239, Dest: 91.108.56.177, Protocol: TCP
+INFO:root:Packet - Source: 91.108.56.177, Dest: 192.168.100.239, Protocol: TCP
+INFO:root:Packet - Source: 192.168.100.1, Dest: 239.255.255.250, Protocol: UDP
+INFO:root:Packet - Source: 192.168.100.1, Dest: 239.255.255.250, Protocol: UDP
+INFO:root:Packet - Source: 192.168.100.1, Dest: 239.255.255.250, Protocol: UDP
+INFO:root:Packet - Source: 192.168.100.1, Dest: 239.255.255.250, Protocol: UDP
+INFO:root:Packet - Source: 192.168.100.237, Dest: 224.0.0.251, Protocol: UDP
+INFO:root:Packet - Source: 192.168.100.237, Dest: 224.0.0.251, Protocol: UDP
+INFO:root:Packet - Source: 192.168.100.239, Dest: 192.168.100.1, Protocol: UDP
+INFO:root:Packet - Source: 192.168.100.239, Dest: 192.168.100.1, Protocol: UDP
+INFO:root:Packet - Source: 192.168.100.1, Dest: 192.168.100.239, Protocol: UDP
+INFO:root:Packet - Source: 192.168.100.1, Dest: 192.168.100.239, Protocol: UDP
+INFO:root:Packet - Source: 192.168.100.239, Dest: 20.37.198.118, Protocol: TCP
+INFO:root:Packet - Source: 20.37.198.118, Dest: 192.168.100.239, Protocol: TCP
+INFO:root:Packet - Source: 192.168.100.239, Dest: 20.37.198.118, Protocol: TCP
+INFO:root:Packet - Source: 192.168.100.239, Dest: 20.37.198.118, Protocol: TCP
+INFO:root:Packet - Source: 20.37.198.118, Dest: 192.168.100.239, Protocol: TCP
+INFO:root:Packet - Source: 192.168.100.239, Dest: 20.37.198.118, Protocol: TCP
+INFO:root:Packet - Source: 192.168.100.239, Dest: 20.37.198.118, Protocol: TCP
+INFO:root:Packet - Source: 20.37.198.118, Dest: 192.168.100.239, Protocol: TCP
+INFO:root:Packet - Source: 192.168.100.239, Dest: 20.37.198.118, Protocol: TCP
+INFO:root:Packet - Source: 192.168.100.239, Dest: 20.37.198.118, Protocol: TCP
+INFO:root:Packet - Source: 20.37.198.118, Dest: 192.168.100.239, Protocol: TCP
+INFO:root:Packet - Source: 20.37.198.118, Dest: 192.168.100.239, Protocol: TCP
+INFO:root:Packet - Source: 20.37.198.118, Dest: 192.168.100.239, Protocol: TCP
+INFO:root:Packet - Source: 192.168.100.239, Dest: 20.37.198.118, Protocol: TCP
+INFO:root:Packet - Source: 192.168.100.239, Dest: 20.37.198.118, Protocol: TCP
+INFO:root:Packet - Source: 192.168.100.239, Dest: 20.37.198.118, Protocol: TCP
+INFO:root:Packet - Source: 20.37.198.118, Dest: 192.168.100.239, Protocol: TCP
+INFO:root:Packet - Source: 192.168.100.239, Dest: 42.99.140.155, Protocol: TCP
+INFO:root:Packet - Source: 192.168.100.237, Dest: 239.255.255.250, Protocol: UDP
+INFO:root:Packet - Source: 42.99.140.155, Dest: 192.168.100.239, Protocol: TCP
+INFO:root:Packet - Source: 192.168.100.237, Dest: 239.255.255.250, Protocol: UDP
+INFO:root:Packet - Source: 192.168.100.237, Dest: 239.255.255.250, Protocol: UDP
+INFO:root:Packet - Source: 192.168.100.237, Dest: 224.0.0.251, Protocol: UDP
+ERROR:asyncio:Task exception was never retrieved
+future: <Task finished name='Task-72' coro=<TsharkXmlParser.get_packets_from_stream() done, defined at /home/archuser/Documents/IDS-Project/intrusion-detection-system-based-on-custom-rules/.venv/lib/python3.12/site-packages/pyshark/tshark/output_parser/tshark_xml.py:24> exception=EOFError()>
+Traceback (most recent call last):
+  File "/home/archuser/Documents/IDS-Project/intrusion-detection-system-based-on-custom-rules/capture_traffic.py", line 25, in <module>
+    start_capture()
+  File "/home/archuser/Documents/IDS-Project/intrusion-detection-system-based-on-custom-rules/capture_traffic.py", line 15, in start_capture
+    for packet in capture.sniff_continuously():
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/archuser/Documents/IDS-Project/intrusion-detection-system-based-on-custom-rules/.venv/lib/python3.12/site-packages/pyshark/capture/capture.py", line 221, in _packets_from_tshark_sync
+    packet, data = self.eventloop.run_until_complete(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/asyncio/base_events.py", line 674, in run_until_complete
+    self.run_forever()
+  File "/usr/lib/python3.12/asyncio/base_events.py", line 641, in run_forever
+    self._run_once()
+  File "/usr/lib/python3.12/asyncio/base_events.py", line 1948, in _run_once
+    event_list = self._selector.select(timeout)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/selectors.py", line 468, in select
+    fd_event_list = self._selector.poll(timeout, max_ev)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/archuser/Documents/IDS-Project/intrusion-detection-system-based-on-custom-rules/.venv/lib/python3.12/site-packages/pyshark/tshark/output_parser/tshark_xml.py", line 27, in get_packets_from_stream
+    return await super().get_packets_from_stream(stream, existing_data, got_first_packet=got_first_packet)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/archuser/Documents/IDS-Project/intrusion-detection-system-based-on-custom-rules/.venv/lib/python3.12/site-packages/pyshark/tshark/output_parser/base_parser.py", line 22, in get_packets_from_stream
+    raise EOFError()
+EOFError
+INFO:root:Packet - Source: 192.168.100.234, Dest: 224.0.0.251, Protocol: UDP
+INFO:root:Packet - Source: 192.168.100.239, Dest: 172.64.155.209, Protocol: TCP
+INFO:root:Packet - Source: 192.168.100.239, Dest: 42.99.140.155, Protocol: TCP
+INFO:root:Packet - Source: 192.168.100.239, Dest: 42.99.140.155, Protocol: TCP
+INFO:root:Packet - Source: 192.168.100.239, Dest: 172.64.155.209, Protocol: TCP
+INFO:root:Packet - Source: 172.64.155.209, Dest: 192.168.100.239, Protocol: TCP
+INFO:root:Packet - Source: 172.64.155.209, Dest: 192.168.100.239, Protocol: TCP
+INFO:root:Packet - Source: 192.168.100.239, Dest: 172.64.155.209, Protocol: TCP
+INFO:root:Packet - Source: 42.99.140.155, Dest: 192.168.100.239, Protocol: TCP
+INFO:root:Packet - Source: 42.99.140.155, Dest: 192.168.100.239, Protocol: TCP
+INFO:root:Packet - Source: 42.99.140.155, Dest: 192.168.100.239, Protocol: TCP
+INFO:root:Packet - Source: 192.168.100.239, Dest: 42.99.140.155, Protocol: TCP
+INFO:root:Packet - Source: 192.168.100.237, Dest: 224.0.0.251, Protocol: UDP
+ERROR:asyncio:Task exception was never retrieved
+future: <Task finished name='Task-26' coro=<TsharkXmlParser.get_packets_from_stream() done, defined at /home/archuser/Documents/IDS-Project/intrusion-detection-system-based-on-custom-rules/.venv/lib/python3.12/site-packages/pyshark/tshark/output_parser/tshark_xml.py:24> exception=EOFError()>
+Traceback (most recent call last):
+  File "/home/archuser/Documents/IDS-Project/intrusion-detection-system-based-on-custom-rules/capture_traffic.py", line 25, in <module>
+    start_capture()
+  File "/home/archuser/Documents/IDS-Project/intrusion-detection-system-based-on-custom-rules/capture_traffic.py", line 15, in start_capture
+    for packet in capture.sniff_continuously():
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/archuser/Documents/IDS-Project/intrusion-detection-system-based-on-custom-rules/.venv/lib/python3.12/site-packages/pyshark/capture/capture.py", line 221, in _packets_from_tshark_sync
+    packet, data = self.eventloop.run_until_complete(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/asyncio/base_events.py", line 674, in run_until_complete
+    self.run_forever()
+  File "/usr/lib/python3.12/asyncio/base_events.py", line 641, in run_forever
+    self._run_once()
+  File "/usr/lib/python3.12/asyncio/base_events.py", line 1948, in _run_once
+    event_list = self._selector.select(timeout)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/selectors.py", line 468, in select
+    fd_event_list = self._selector.poll(timeout, max_ev)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/archuser/Documents/IDS-Project/intrusion-detection-system-based-on-custom-rules/.venv/lib/python3.12/site-packages/pyshark/tshark/output_parser/tshark_xml.py", line 27, in get_packets_from_stream
+    return await super().get_packets_from_stream(stream, existing_data, got_first_packet=got_first_packet)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/archuser/Documents/IDS-Project/intrusion-detection-system-based-on-custom-rules/.venv/lib/python3.12/site-packages/pyshark/tshark/output_parser/base_parser.py", line 22, in get_packets_from_stream
+    raise EOFError()
+EOFError
+INFO:root:Packet - Source: 192.168.100.5, Dest: 224.0.0.251, Protocol: UDP
+INFO:root:Packet - Source: 192.168.100.5, Dest: 224.0.0.251, Protocol: UDP
+INFO:root:Packet - Source: 192.168.100.5, Dest: 224.0.0.251, Protocol: UDP
+INFO:root:Packet - Source: 192.168.100.5, Dest: 224.0.0.22, Protocol: None
+INFO:root:Packet - Source: 192.168.100.5, Dest: 224.0.0.251, Protocol: UDP
+INFO:root:Packet - Source: 192.168.100.5, Dest: 224.0.0.251, Protocol: UDP
+INFO:root:Packet - Source: 192.168.100.5, Dest: 224.0.0.251, Protocol: UDP
+INFO:root:Packet - Source: 192.168.100.5, Dest: 224.0.0.251, Protocol: UDP
+INFO:root:Packet - Source: 192.168.100.5, Dest: 224.0.0.251, Protocol: UDP
+INFO:root:Packet - Source: 192.168.100.5, Dest: 224.0.0.251, Protocol: UDP
+INFO:root:Packet - Source: 192.168.100.1, Dest: 239.255.255.250, Protocol: UDP
+INFO:root:Packet - Source: 192.168.100.1, Dest: 239.255.255.250, Protocol: UDP
+INFO:root:Packet - Source: 192.168.100.5, Dest: 224.0.0.251, Protocol: UDP
+INFO:root:Packet - Source: 192.168.100.1, Dest: 239.255.255.250, Protocol: UDP
+INFO:root:Packet - Source: 192.168.100.239, Dest: 192.168.100.1, Protocol: UDP
+INFO:root:Packet - Source: 192.168.100.239, Dest: 192.168.100.1, Protocol: UDP
+INFO:root:Packet - Source: 192.168.100.1, Dest: 239.255.255.250, Protocol: UDP
+INFO:root:Packet - Source: 192.168.100.1, Dest: 192.168.100.239, Protocol: UDP
+INFO:root:Packet - Source: 192.168.100.1, Dest: 192.168.100.239, Protocol: UDP
+INFO:root:Packet - Source: 192.168.100.5, Dest: 224.0.0.22, Protocol: None
+INFO:root:Packet - Source: 192.168.100.239, Dest: 20.213.196.212, Protocol: TCP
+INFO:root:Packet - Source: 20.213.196.212, Dest: 192.168.100.239, Protocol: TCP
+INFO:root:Packet - Source: 192.168.100.239, Dest: 20.213.196.212, Protocol: TCP
+INFO:root:Packet - Source: 192.168.100.239, Dest: 20.213.196.212, Protocol: TCP
+INFO:root:Packet - Source: 20.213.196.212, Dest: 192.168.100.239, Protocol: TCP
+INFO:root:Packet - Source: 192.168.100.239, Dest: 20.213.196.212, Protocol: TCP
+INFO:root:Packet - Source: 192.168.100.239, Dest: 20.213.196.212, Protocol: TCP
+INFO:root:Packet - Source: 192.168.100.5, Dest: 224.0.0.251, Protocol: UDP
+INFO:root:Packet - Source: 192.168.100.5, Dest: 224.0.0.251, Protocol: UDP
+INFO:root:Packet - Source: 20.213.196.212, Dest: 192.168.100.239, Protocol: TCP
+INFO:root:Packet - Source: 192.168.100.239, Dest: 20.213.196.212, Protocol: TCP
+INFO:root:Packet - Source: 192.168.100.239, Dest: 20.213.196.212, Protocol: TCP
+INFO:root:Packet - Source: 20.213.196.212, Dest: 192.168.100.239, Protocol: TCP
+INFO:root:Packet - Source: 20.213.196.212, Dest: 192.168.100.239, Protocol: TCP
+INFO:root:Packet - Source: 20.213.196.212, Dest: 192.168.100.239, Protocol: TCP
+INFO:root:Packet - Source: 192.168.100.239, Dest: 20.213.196.212, Protocol: TCP
+INFO:root:Packet - Source: 192.168.100.239, Dest: 20.213.196.212, Protocol: TCP
+INFO:root:Packet - Source: 192.168.100.239, Dest: 20.213.196.212, Protocol: TCP
+INFO:root:Packet - Source: 20.213.196.212, Dest: 192.168.100.239, Protocol: TCP
+ERROR:asyncio:Task exception was never retrieved
+future: <Task finished name='Task-78' coro=<TsharkXmlParser.get_packets_from_stream() done, defined at /home/archuser/Documents/IDS-Project/intrusion-detection-system-based-on-custom-rules/.venv/lib/python3.12/site-packages/pyshark/tshark/output_parser/tshark_xml.py:24> exception=EOFError()>
+Traceback (most recent call last):
+  File "/home/archuser/Documents/IDS-Project/intrusion-detection-system-based-on-custom-rules/capture_traffic.py", line 22, in <module>
+    start_capture(interface="wlp2s0", max_packets=100)
+  File "/home/archuser/Documents/IDS-Project/intrusion-detection-system-based-on-custom-rules/capture_traffic.py", line 15, in start_capture
+    for packet in capture.sniff_continuously():
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/archuser/Documents/IDS-Project/intrusion-detection-system-based-on-custom-rules/.venv/lib/python3.12/site-packages/pyshark/capture/capture.py", line 221, in _packets_from_tshark_sync
+    packet, data = self.eventloop.run_until_complete(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/asyncio/base_events.py", line 674, in run_until_complete
+    self.run_forever()
+  File "/usr/lib/python3.12/asyncio/base_events.py", line 641, in run_forever
+    self._run_once()
+  File "/usr/lib/python3.12/asyncio/base_events.py", line 1948, in _run_once
+    event_list = self._selector.select(timeout)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/selectors.py", line 468, in select
+    fd_event_list = self._selector.poll(timeout, max_ev)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/archuser/Documents/IDS-Project/intrusion-detection-system-based-on-custom-rules/.venv/lib/python3.12/site-packages/pyshark/tshark/output_parser/tshark_xml.py", line 27, in get_packets_from_stream
+    return await super().get_packets_from_stream(stream, existing_data, got_first_packet=got_first_packet)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/archuser/Documents/IDS-Project/intrusion-detection-system-based-on-custom-rules/.venv/lib/python3.12/site-packages/pyshark/tshark/output_parser/base_parser.py", line 22, in get_packets_from_stream
+    raise EOFError()
+EOFError
+INFO:root:Packet - Source: 192.168.100.239, Dest: 91.108.56.177, Protocol: TCP
+INFO:root:Packet - Source: 91.108.56.177, Dest: 192.168.100.239, Protocol: TCP
+INFO:root:Packet - Source: 91.108.56.177, Dest: 192.168.100.239, Protocol: TCP
+INFO:root:Packet - Source: 192.168.100.239, Dest: 91.108.56.177, Protocol: TCP
+INFO:root:Packet - Source: 192.168.100.239, Dest: 91.108.56.177, Protocol: TCP
+INFO:root:Packet - Source: 91.108.56.177, Dest: 192.168.100.239, Protocol: TCP
+INFO:root:Packet - Source: 192.168.100.234, Dest: 224.0.0.251, Protocol: UDP
+ERROR:asyncio:Task exception was never retrieved
+future: <Task finished name='Task-19' coro=<TsharkXmlParser.get_packets_from_stream() done, defined at /home/archuser/Documents/IDS-Project/intrusion-detection-system-based-on-custom-rules/.venv/lib/python3.12/site-packages/pyshark/tshark/output_parser/tshark_xml.py:24> exception=EOFError()>
+Traceback (most recent call last):
+  File "/home/archuser/Documents/IDS-Project/intrusion-detection-system-based-on-custom-rules/capture_traffic.py", line 22, in <module>
+    start_capture(interface="wlp2s0", max_packets=100)
+  File "/home/archuser/Documents/IDS-Project/intrusion-detection-system-based-on-custom-rules/capture_traffic.py", line 15, in start_capture
+    for packet in capture.sniff_continuously():
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/archuser/Documents/IDS-Project/intrusion-detection-system-based-on-custom-rules/.venv/lib/python3.12/site-packages/pyshark/capture/capture.py", line 221, in _packets_from_tshark_sync
+    packet, data = self.eventloop.run_until_complete(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/asyncio/base_events.py", line 674, in run_until_complete
+    self.run_forever()
+  File "/usr/lib/python3.12/asyncio/base_events.py", line 641, in run_forever
+    self._run_once()
+  File "/usr/lib/python3.12/asyncio/base_events.py", line 1948, in _run_once
+    event_list = self._selector.select(timeout)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/selectors.py", line 468, in select
+    fd_event_list = self._selector.poll(timeout, max_ev)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/archuser/Documents/IDS-Project/intrusion-detection-system-based-on-custom-rules/.venv/lib/python3.12/site-packages/pyshark/tshark/output_parser/tshark_xml.py", line 27, in get_packets_from_stream
+    return await super().get_packets_from_stream(stream, existing_data, got_first_packet=got_first_packet)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/archuser/Documents/IDS-Project/intrusion-detection-system-based-on-custom-rules/.venv/lib/python3.12/site-packages/pyshark/tshark/output_parser/base_parser.py", line 22, in get_packets_from_stream
+    raise EOFError()
+EOFError
+INFO:root:Packet 1 - Source: 192.168.100.1:53, Dest: 192.168.100.239:55391, Protocol: UDP, Length: 466 bytes, Flags: N/A
+INFO:root:Packet 2 - Source: 192.168.100.1:53, Dest: 192.168.100.239:55391, Protocol: UDP, Length: 510 bytes, Flags: N/A
+INFO:root:Packet 3 - Source: 192.168.100.239:34802, Dest: 20.213.196.212:443, Protocol: TCP, Length: 74 bytes, Flags: 0x0002
+INFO:root:Packet 4 - Source: 20.213.196.212:443, Dest: 192.168.100.239:34802, Protocol: TCP, Length: 74 bytes, Flags: 0x0012
+INFO:root:Packet 5 - Source: 192.168.100.239:34802, Dest: 20.213.196.212:443, Protocol: TCP, Length: 66 bytes, Flags: 0x0010
+INFO:root:Packet 6 - Source: 192.168.100.239:34802, Dest: 20.213.196.212:443, Protocol: TCP, Length: 583 bytes, Flags: 0x0018
+INFO:root:Packet 7 - Source: 20.213.196.212:443, Dest: 192.168.100.239:34802, Protocol: TCP, Length: 165 bytes, Flags: 0x0018
+INFO:root:Packet 8 - Source: 192.168.100.239:34802, Dest: 20.213.196.212:443, Protocol: TCP, Length: 66 bytes, Flags: 0x0010
+INFO:root:Packet 9 - Source: 192.168.100.239:34802, Dest: 20.213.196.212:443, Protocol: TCP, Length: 499 bytes, Flags: 0x0018
+INFO:root:Packet 10 - Source: 20.213.196.212:443, Dest: 192.168.100.239:34802, Protocol: TCP, Length: 2866 bytes, Flags: 0x0010
+INFO:root:Packet 11 - Source: 192.168.100.239:34802, Dest: 20.213.196.212:443, Protocol: TCP, Length: 66 bytes, Flags: 0x0010
+INFO:root:Packet 12 - Source: 20.213.196.212:443, Dest: 192.168.100.239:34802, Protocol: TCP, Length: 1676 bytes, Flags: 0x0018
+INFO:root:Packet 13 - Source: 192.168.100.239:34802, Dest: 20.213.196.212:443, Protocol: TCP, Length: 66 bytes, Flags: 0x0010
+INFO:root:Packet 14 - Source: 192.168.100.239:34802, Dest: 20.213.196.212:443, Protocol: TCP, Length: 724 bytes, Flags: 0x0018
+INFO:root:Packet 15 - Source: 20.213.196.212:443, Dest: 192.168.100.239:34802, Protocol: TCP, Length: 169 bytes, Flags: 0x0018
+INFO:root:Packet 16 - Source: 20.213.196.212:443, Dest: 192.168.100.239:34802, Protocol: TCP, Length: 555 bytes, Flags: 0x0018
+INFO:root:Packet 17 - Source: 20.213.196.212:443, Dest: 192.168.100.239:34802, Protocol: TCP, Length: 93 bytes, Flags: 0x0019
+INFO:root:Packet 18 - Source: 192.168.100.239:34802, Dest: 20.213.196.212:443, Protocol: TCP, Length: 66 bytes, Flags: 0x0010
+INFO:root:Packet 19 - Source: 192.168.100.239:34802, Dest: 20.213.196.212:443, Protocol: TCP, Length: 90 bytes, Flags: 0x0018
+INFO:root:Packet 20 - Source: 192.168.100.239:34802, Dest: 20.213.196.212:443, Protocol: TCP, Length: 66 bytes, Flags: 0x0011
+INFO:root:Packet 21 - Source: 20.213.196.212:443, Dest: 192.168.100.239:34802, Protocol: TCP, Length: 66 bytes, Flags: 0x0010
