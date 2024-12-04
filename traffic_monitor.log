@@ -1,0 +1,168 @@
+INFO:root:Packet 1 - Source: 192.168.100.239:43016, Dest: 91.108.56.177:443, Protocol: TCP, Length: 347 bytes, Flags: 0x0018
+INFO:root:Packet 2 - Source: 91.108.56.177:443, Dest: 192.168.100.239:43016, Protocol: TCP, Length: 66 bytes, Flags: 0x0010
+INFO:root:Packet 3 - Source: 91.108.56.177:443, Dest: 192.168.100.239:43016, Protocol: TCP, Length: 155 bytes, Flags: 0x0018
+INFO:root:Packet 4 - Source: 192.168.100.239:43016, Dest: 91.108.56.177:443, Protocol: TCP, Length: 66 bytes, Flags: 0x0010
+ERROR:asyncio:Task exception was never retrieved
+future: <Task finished name='Task-13' coro=<TsharkXmlParser.get_packets_from_stream() done, defined at /home/archuser/Documents/IDS-Project/intrusion-detection-system-based-on-custom-rules/.venv/lib/python3.12/site-packages/pyshark/tshark/output_parser/tshark_xml.py:24> exception=EOFError()>
+Traceback (most recent call last):
+  File "/home/archuser/Documents/IDS-Project/intrusion-detection-system-based-on-custom-rules/capture_traffic.py", line 22, in <module>
+    start_capture(interface="wlp2s0", max_packets=100)
+  File "/home/archuser/Documents/IDS-Project/intrusion-detection-system-based-on-custom-rules/capture_traffic.py", line 15, in start_capture
+    for packet in capture.sniff_continuously():
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/archuser/Documents/IDS-Project/intrusion-detection-system-based-on-custom-rules/.venv/lib/python3.12/site-packages/pyshark/capture/capture.py", line 221, in _packets_from_tshark_sync
+    packet, data = self.eventloop.run_until_complete(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/asyncio/base_events.py", line 674, in run_until_complete
+    self.run_forever()
+  File "/usr/lib/python3.12/asyncio/base_events.py", line 641, in run_forever
+    self._run_once()
+  File "/usr/lib/python3.12/asyncio/base_events.py", line 1948, in _run_once
+    event_list = self._selector.select(timeout)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/selectors.py", line 468, in select
+    fd_event_list = self._selector.poll(timeout, max_ev)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/archuser/Documents/IDS-Project/intrusion-detection-system-based-on-custom-rules/.venv/lib/python3.12/site-packages/pyshark/tshark/output_parser/tshark_xml.py", line 27, in get_packets_from_stream
+    return await super().get_packets_from_stream(stream, existing_data, got_first_packet=got_first_packet)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/archuser/Documents/IDS-Project/intrusion-detection-system-based-on-custom-rules/.venv/lib/python3.12/site-packages/pyshark/tshark/output_parser/base_parser.py", line 22, in get_packets_from_stream
+    raise EOFError()
+EOFError
+INFO:root:Packet 1 - Source: 192.168.100.239:56956, Dest: 192.168.100.1:53, Protocol: UDP, Length: 88 bytes, Flags: N/A
+INFO:root:Packet 2 - Source: 192.168.100.239:56956, Dest: 192.168.100.1:53, Protocol: UDP, Length: 88 bytes, Flags: N/A
+INFO:root:Packet 3 - Source: 192.168.100.1:53, Dest: 192.168.100.239:56956, Protocol: UDP, Length: 510 bytes, Flags: N/A
+INFO:root:Packet 4 - Source: 192.168.100.1:53, Dest: 192.168.100.239:56956, Protocol: UDP, Length: 466 bytes, Flags: N/A
+INFO:root:Packet 5 - Source: 192.168.100.239:34490, Dest: 20.37.198.118:443, Protocol: TCP, Length: 74 bytes, Flags: 0x0002
+INFO:root:Packet 6 - Source: 20.37.198.118:443, Dest: 192.168.100.239:34490, Protocol: TCP, Length: 74 bytes, Flags: 0x0012
+INFO:root:Packet 7 - Source: 192.168.100.239:34490, Dest: 20.37.198.118:443, Protocol: TCP, Length: 66 bytes, Flags: 0x0010
+INFO:root:Packet 8 - Source: 192.168.100.239:34490, Dest: 20.37.198.118:443, Protocol: TCP, Length: 583 bytes, Flags: 0x0018
+INFO:root:Packet 9 - Source: 20.37.198.118:443, Dest: 192.168.100.239:34490, Protocol: TCP, Length: 165 bytes, Flags: 0x0018
+INFO:root:Packet 10 - Source: 192.168.100.239:34490, Dest: 20.37.198.118:443, Protocol: TCP, Length: 66 bytes, Flags: 0x0010
+INFO:root:Packet 11 - Source: 192.168.100.239:34490, Dest: 20.37.198.118:443, Protocol: TCP, Length: 499 bytes, Flags: 0x0018
+INFO:root:Packet 12 - Source: 20.37.198.118:443, Dest: 192.168.100.239:34490, Protocol: TCP, Length: 2866 bytes, Flags: 0x0010
+INFO:root:Packet 13 - Source: 192.168.100.239:34490, Dest: 20.37.198.118:443, Protocol: TCP, Length: 66 bytes, Flags: 0x0010
+INFO:root:Packet 14 - Source: 20.37.198.118:443, Dest: 192.168.100.239:34490, Protocol: TCP, Length: 1675 bytes, Flags: 0x0018
+INFO:root:Packet 15 - Source: 192.168.100.239:34490, Dest: 20.37.198.118:443, Protocol: TCP, Length: 66 bytes, Flags: 0x0010
+INFO:root:Packet 16 - Source: 192.168.100.239:34490, Dest: 20.37.198.118:443, Protocol: TCP, Length: 723 bytes, Flags: 0x0018
+INFO:root:Packet 17 - Source: 20.37.198.118:443, Dest: 192.168.100.239:34490, Protocol: TCP, Length: 169 bytes, Flags: 0x0018
+INFO:root:Packet 18 - Source: 20.37.198.118:443, Dest: 192.168.100.239:34490, Protocol: TCP, Length: 555 bytes, Flags: 0x0018
+INFO:root:Packet 19 - Source: 20.37.198.118:443, Dest: 192.168.100.239:34490, Protocol: TCP, Length: 93 bytes, Flags: 0x0019
+INFO:root:Packet 20 - Source: 192.168.100.239:34490, Dest: 20.37.198.118:443, Protocol: TCP, Length: 66 bytes, Flags: 0x0010
+INFO:root:Packet 21 - Source: 192.168.100.239:34490, Dest: 20.37.198.118:443, Protocol: TCP, Length: 90 bytes, Flags: 0x0018
+INFO:root:Packet 22 - Source: 192.168.100.239:34490, Dest: 20.37.198.118:443, Protocol: TCP, Length: 66 bytes, Flags: 0x0011
+INFO:root:Packet 23 - Source: 20.37.198.118:443, Dest: 192.168.100.239:34490, Protocol: TCP, Length: 66 bytes, Flags: 0x0010
+INFO:root:Packet 24 - Source: 192.168.100.164:5353, Dest: 224.0.0.251:5353, Protocol: UDP, Length: 124 bytes, Flags: N/A
+INFO:root:Packet 25 - Source: 192.168.100.58:5353, Dest: 224.0.0.251:5353, Protocol: UDP, Length: 119 bytes, Flags: N/A
+INFO:root:Packet 26 - Source: 192.168.100.164:5353, Dest: 224.0.0.251:5353, Protocol: UDP, Length: 124 bytes, Flags: N/A
+INFO:root:Packet 27 - Source: 192.168.100.239:37872, Dest: 192.168.100.1:53, Protocol: UDP, Length: 70 bytes, Flags: N/A
+INFO:root:Packet 28 - Source: 192.168.100.239:37872, Dest: 192.168.100.1:53, Protocol: UDP, Length: 70 bytes, Flags: N/A
+INFO:root:Packet 29 - Source: 192.168.100.1:53, Dest: 192.168.100.239:37872, Protocol: UDP, Length: 70 bytes, Flags: N/A
+INFO:root:Packet 30 - Source: 192.168.100.1:53, Dest: 192.168.100.239:37872, Protocol: UDP, Length: 86 bytes, Flags: N/A
+INFO:root:Packet 31 - Source: 192.168.100.239:40248, Dest: 20.205.243.166:443, Protocol: TCP, Length: 74 bytes, Flags: 0x0002
+INFO:root:Packet 32 - Source: 20.205.243.166:443, Dest: 192.168.100.239:40248, Protocol: TCP, Length: 74 bytes, Flags: 0x0012
+INFO:root:Packet 33 - Source: 192.168.100.239:40248, Dest: 20.205.243.166:443, Protocol: TCP, Length: 66 bytes, Flags: 0x0010
+INFO:root:Packet 34 - Source: 192.168.100.239:40248, Dest: 20.205.243.166:443, Protocol: TCP, Length: 583 bytes, Flags: 0x0018
+INFO:root:Packet 35 - Source: 20.205.243.166:443, Dest: 192.168.100.239:40248, Protocol: TCP, Length: 2866 bytes, Flags: 0x0018
+INFO:root:Packet 36 - Source: 20.205.243.166:443, Dest: 192.168.100.239:40248, Protocol: TCP, Length: 757 bytes, Flags: 0x0018
+INFO:root:Packet 37 - Source: 192.168.100.239:40248, Dest: 20.205.243.166:443, Protocol: TCP, Length: 66 bytes, Flags: 0x0010
+INFO:root:Packet 38 - Source: 192.168.100.239:40248, Dest: 20.205.243.166:443, Protocol: TCP, Length: 66 bytes, Flags: 0x0010
+INFO:root:Packet 39 - Source: 192.168.100.239:40248, Dest: 20.205.243.166:443, Protocol: TCP, Length: 130 bytes, Flags: 0x0018
+INFO:root:Packet 40 - Source: 192.168.100.239:40248, Dest: 20.205.243.166:443, Protocol: TCP, Length: 410 bytes, Flags: 0x0018
+INFO:root:Packet 41 - Source: 20.205.243.166:443, Dest: 192.168.100.239:40248, Protocol: TCP, Length: 145 bytes, Flags: 0x0018
+INFO:root:Packet 42 - Source: 20.205.243.166:443, Dest: 192.168.100.239:40248, Protocol: TCP, Length: 145 bytes, Flags: 0x0018
+INFO:root:Packet 43 - Source: 20.205.243.166:443, Dest: 192.168.100.239:40248, Protocol: TCP, Length: 130 bytes, Flags: 0x0018
+INFO:root:Packet 44 - Source: 192.168.100.239:40248, Dest: 20.205.243.166:443, Protocol: TCP, Length: 66 bytes, Flags: 0x0010
+INFO:root:Packet 45 - Source: 192.168.100.239:40248, Dest: 20.205.243.166:443, Protocol: TCP, Length: 97 bytes, Flags: 0x0018
+INFO:root:Packet 46 - Source: 20.205.243.166:443, Dest: 192.168.100.239:40248, Protocol: TCP, Length: 66 bytes, Flags: 0x0010
+INFO:root:Packet 47 - Source: 20.205.243.166:443, Dest: 192.168.100.239:40248, Protocol: TCP, Length: 629 bytes, Flags: 0x0018
+INFO:root:Packet 48 - Source: 192.168.100.239:40248, Dest: 20.205.243.166:443, Protocol: TCP, Length: 423 bytes, Flags: 0x0018
+INFO:root:Packet 49 - Source: 20.205.243.166:443, Dest: 192.168.100.239:40248, Protocol: TCP, Length: 66 bytes, Flags: 0x0010
+INFO:root:Packet 50 - Source: 20.205.243.166:443, Dest: 192.168.100.239:40248, Protocol: TCP, Length: 114 bytes, Flags: 0x0018
+INFO:root:Packet 51 - Source: 192.168.100.239:40248, Dest: 20.205.243.166:443, Protocol: TCP, Length: 66 bytes, Flags: 0x0010
+INFO:root:Packet 52 - Source: 192.168.100.244:5353, Dest: 224.0.0.251:5353, Protocol: UDP, Length: 100 bytes, Flags: N/A
+INFO:root:Packet 53 - Source: 192.168.100.164:5353, Dest: 224.0.0.251:5353, Protocol: UDP, Length: 124 bytes, Flags: N/A
+INFO:root:Packet 54 - Source: 20.205.243.166:443, Dest: 192.168.100.239:40248, Protocol: TCP, Length: 760 bytes, Flags: 0x0018
+INFO:root:Packet 55 - Source: 192.168.100.239:40248, Dest: 20.205.243.166:443, Protocol: TCP, Length: 66 bytes, Flags: 0x0010
+INFO:root:Packet 56 - Source: 192.168.100.239:40248, Dest: 20.205.243.166:443, Protocol: TCP, Length: 114 bytes, Flags: 0x0018
+INFO:root:Packet 57 - Source: 192.168.100.239:40248, Dest: 20.205.243.166:443, Protocol: TCP, Length: 90 bytes, Flags: 0x0019
+INFO:root:Packet 58 - Source: 20.205.243.166:443, Dest: 192.168.100.239:40248, Protocol: TCP, Length: 66 bytes, Flags: 0x0010
+INFO:root:Packet 59 - Source: 20.205.243.166:443, Dest: 192.168.100.239:40248, Protocol: TCP, Length: 90 bytes, Flags: 0x0018
+INFO:root:Packet 60 - Source: 192.168.100.239:40248, Dest: 20.205.243.166:443, Protocol: TCP, Length: 54 bytes, Flags: 0x0004
+INFO:root:Packet 61 - Source: 20.205.243.166:443, Dest: 192.168.100.239:40248, Protocol: TCP, Length: 66 bytes, Flags: 0x0011
+INFO:root:Packet 62 - Source: 192.168.100.239:40248, Dest: 20.205.243.166:443, Protocol: TCP, Length: 54 bytes, Flags: 0x0004
+INFO:root:Packet 63 - Source: 192.168.100.244:5353, Dest: 224.0.0.251:5353, Protocol: UDP, Length: 100 bytes, Flags: N/A
+INFO:root:Packet 64 - Source: 192.168.100.244:5353, Dest: 224.0.0.251:5353, Protocol: UDP, Length: 97 bytes, Flags: N/A
+INFO:root:Packet 65 - Source: 192.168.100.244:5353, Dest: 224.0.0.251:5353, Protocol: UDP, Length: 97 bytes, Flags: N/A
+INFO:root:Packet 66 - Source: 192.168.100.244:5353, Dest: 224.0.0.251:5353, Protocol: UDP, Length: 100 bytes, Flags: N/A
+INFO:root:Packet 67 - Source: 192.168.100.238:1900, Dest: 239.255.255.250:1900, Protocol: UDP, Length: 552 bytes, Flags: N/A
+INFO:root:Packet 68 - Source: 192.168.100.238:1900, Dest: 239.255.255.250:1900, Protocol: UDP, Length: 550 bytes, Flags: N/A
+INFO:root:Packet 69 - Source: 192.168.100.244:5353, Dest: 224.0.0.251:5353, Protocol: UDP, Length: 97 bytes, Flags: N/A
+INFO:root:Packet 70 - Source: 192.168.100.238:1900, Dest: 239.255.255.250:1900, Protocol: UDP, Length: 540 bytes, Flags: N/A
+INFO:root:Packet 71 - Source: 192.168.100.238:1900, Dest: 239.255.255.250:1900, Protocol: UDP, Length: 542 bytes, Flags: N/A
+INFO:root:Packet 72 - Source: 192.168.100.238:1900, Dest: 239.255.255.250:1900, Protocol: UDP, Length: 486 bytes, Flags: N/A
+INFO:root:Packet 73 - Source: 192.168.100.238:1900, Dest: 239.255.255.250:1900, Protocol: UDP, Length: 486 bytes, Flags: N/A
+INFO:root:Packet 74 - Source: 192.168.100.238:1900, Dest: 239.255.255.250:1900, Protocol: UDP, Length: 495 bytes, Flags: N/A
+INFO:root:Packet 75 - Source: 192.168.100.58:5353, Dest: 224.0.0.251:5353, Protocol: UDP, Length: 119 bytes, Flags: N/A
+INFO:root:Packet 76 - Source: 192.168.100.238:1900, Dest: 239.255.255.250:1900, Protocol: UDP, Length: 540 bytes, Flags: N/A
+INFO:root:Packet 77 - Source: 192.168.100.238:1900, Dest: 239.255.255.250:1900, Protocol: UDP, Length: 542 bytes, Flags: N/A
+INFO:root:Packet 78 - Source: 192.168.100.238:1900, Dest: 239.255.255.250:1900, Protocol: UDP, Length: 495 bytes, Flags: N/A
+INFO:root:Packet 79 - Source: 192.168.100.238:1900, Dest: 239.255.255.250:1900, Protocol: UDP, Length: 550 bytes, Flags: N/A
+INFO:root:Packet 80 - Source: 192.168.100.238:1900, Dest: 239.255.255.250:1900, Protocol: UDP, Length: 552 bytes, Flags: N/A
+INFO:root:Packet 81 - Source: 192.168.100.238:1900, Dest: 239.255.255.250:1900, Protocol: UDP, Length: 550 bytes, Flags: N/A
+INFO:root:Packet 82 - Source: 192.168.100.238:1900, Dest: 239.255.255.250:1900, Protocol: UDP, Length: 540 bytes, Flags: N/A
+INFO:root:Packet 83 - Source: 192.168.100.238:1900, Dest: 239.255.255.250:1900, Protocol: UDP, Length: 542 bytes, Flags: N/A
+INFO:root:Packet 84 - Source: 192.168.100.238:1900, Dest: 239.255.255.250:1900, Protocol: UDP, Length: 486 bytes, Flags: N/A
+INFO:root:Packet 85 - Source: 192.168.100.238:1900, Dest: 239.255.255.250:1900, Protocol: UDP, Length: 486 bytes, Flags: N/A
+INFO:root:Packet 86 - Source: 192.168.100.238:1900, Dest: 239.255.255.250:1900, Protocol: UDP, Length: 495 bytes, Flags: N/A
+INFO:root:Packet 87 - Source: 192.168.100.238:1900, Dest: 239.255.255.250:1900, Protocol: UDP, Length: 540 bytes, Flags: N/A
+INFO:root:Packet 88 - Source: 192.168.100.238:1900, Dest: 239.255.255.250:1900, Protocol: UDP, Length: 552 bytes, Flags: N/A
+INFO:root:Packet 89 - Source: 192.168.100.238:1900, Dest: 239.255.255.250:1900, Protocol: UDP, Length: 542 bytes, Flags: N/A
+INFO:root:Packet 90 - Source: 192.168.100.238:1900, Dest: 239.255.255.250:1900, Protocol: UDP, Length: 495 bytes, Flags: N/A
+INFO:root:Packet 91 - Source: 192.168.100.238:1900, Dest: 239.255.255.250:1900, Protocol: UDP, Length: 550 bytes, Flags: N/A
+INFO:root:Packet 92 - Source: 192.168.100.238:1900, Dest: 239.255.255.250:1900, Protocol: UDP, Length: 552 bytes, Flags: N/A
+INFO:root:Packet 93 - Source: 192.168.100.238:1900, Dest: 239.255.255.250:1900, Protocol: UDP, Length: 550 bytes, Flags: N/A
+INFO:root:Packet 94 - Source: 192.168.100.238:1900, Dest: 239.255.255.250:1900, Protocol: UDP, Length: 542 bytes, Flags: N/A
+INFO:root:Packet 95 - Source: 192.168.100.238:1900, Dest: 239.255.255.250:1900, Protocol: UDP, Length: 486 bytes, Flags: N/A
+INFO:root:Packet 96 - Source: 192.168.100.238:1900, Dest: 239.255.255.250:1900, Protocol: UDP, Length: 486 bytes, Flags: N/A
+INFO:root:Packet 97 - Source: 192.168.100.238:1900, Dest: 239.255.255.250:1900, Protocol: UDP, Length: 495 bytes, Flags: N/A
+INFO:root:Packet 98 - Source: 192.168.100.244:5353, Dest: 224.0.0.251:5353, Protocol: UDP, Length: 122 bytes, Flags: N/A
+INFO:root:Packet 99 - Source: 192.168.100.238:1900, Dest: 239.255.255.250:1900, Protocol: UDP, Length: 540 bytes, Flags: N/A
+INFO:root:Packet 100 - Source: 192.168.100.238:1900, Dest: 239.255.255.250:1900, Protocol: UDP, Length: 552 bytes, Flags: N/A
+ERROR:asyncio:Task exception was never retrieved
+future: <Task finished name='Task-216' coro=<TsharkXmlParser.get_packets_from_stream() done, defined at /home/archuser/Documents/IDS-Project/intrusion-detection-system-based-on-custom-rules/.venv/lib/python3.12/site-packages/pyshark/tshark/output_parser/tshark_xml.py:24> exception=EOFError()>
+Traceback (most recent call last):
+  File "/home/archuser/Documents/IDS-Project/intrusion-detection-system-based-on-custom-rules/capture_traffic.py", line 22, in <module>
+    start_capture(interface="wlp2s0", max_packets=100)
+  File "/home/archuser/Documents/IDS-Project/intrusion-detection-system-based-on-custom-rules/capture_traffic.py", line 15, in start_capture
+    for packet in capture.sniff_continuously():
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/archuser/Documents/IDS-Project/intrusion-detection-system-based-on-custom-rules/.venv/lib/python3.12/site-packages/pyshark/capture/capture.py", line 221, in _packets_from_tshark_sync
+    packet, data = self.eventloop.run_until_complete(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/asyncio/base_events.py", line 674, in run_until_complete
+    self.run_forever()
+  File "/usr/lib/python3.12/asyncio/base_events.py", line 641, in run_forever
+    self._run_once()
+  File "/usr/lib/python3.12/asyncio/base_events.py", line 1948, in _run_once
+    event_list = self._selector.select(timeout)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/selectors.py", line 468, in select
+    fd_event_list = self._selector.poll(timeout, max_ev)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/archuser/Documents/IDS-Project/intrusion-detection-system-based-on-custom-rules/.venv/lib/python3.12/site-packages/pyshark/tshark/output_parser/tshark_xml.py", line 27, in get_packets_from_stream
+    return await super().get_packets_from_stream(stream, existing_data, got_first_packet=got_first_packet)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/archuser/Documents/IDS-Project/intrusion-detection-system-based-on-custom-rules/.venv/lib/python3.12/site-packages/pyshark/tshark/output_parser/base_parser.py", line 22, in get_packets_from_stream
+    raise EOFError()
+EOFError
