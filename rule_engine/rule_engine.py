@@ -1,6 +1,6 @@
 from datetime import datetime, timedelta
 from typing import List, Dict
-from alert import trigger_alerts
+from alert_system.alert import trigger_alerts
 
 class Rule:
     def __init__(self, name: str, threshold: int, timeframe: int):
