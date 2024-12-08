@@ -2,7 +2,7 @@ import logging
 import pyshark
 import time
 from collections import defaultdict
-from alert import trigger_alerts
+from alert_system.alert import trigger_alerts
 
 class TrafficMonitor:
     def __init__(self, max_packets=100):
