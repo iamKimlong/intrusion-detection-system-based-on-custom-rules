@@ -1,5 +1,4 @@
 from loguru import logger
-from models import Alert
 import smtplib
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
@@ -21,9 +20,16 @@ def set_user_preference(choice):
     if choice in [1, 2, 3]:
         user_preference[0] = choice
 
-def send_email(subject, body, recipient_email):
-    sender_email = "chhuonnara002@gmail.com"  # Change this to your email
-    app_password = "cnfv uqii  avuq anij"  # Use your Gmail app password
+# Configure logging
+logger.add("alerts.log", format="{time} {level} {message}", level="INFO")
+
+# User action storage
+flagged_ips = set()
+blocked_ips = set()
+
+def send_email(subject, body, recipient_email="recipient@example.com"):
+    sender_email = "chhuonnara002@gmail.com"
+    app_password = "cnfv uqii avuq anij"
 
     msg = MIMEMultipart()
     msg['From'] = sender_email
@@ -37,78 +43,57 @@ def send_email(subject, body, recipient_email):
         server.login(sender_email, app_password)
         server.sendmail(sender_email, recipient_email, msg.as_string())
         server.quit()
-        print(f"Email sent to {recipient_email}")
+        print(f"[EMAIL] Alert sent to {recipient_email}")
     except Exception as e:
-        print(f"Failed to send email: {e}")
+        print(f"[ERROR] Failed to send email: {e}")
 
-# Function to show a notification
 def show_notification(title, message):
     notification.notify(
         title=title,
         message=message,
-        app_icon=None,
         timeout=20
     )
 
-# Function to play an alert sound
 def play_alert_sound():
     sound_file = "alert.mp3"
     if os.path.exists(sound_file):
         playsound(sound_file)
     else:
-        print(f"Alert sound file '{sound_file}' not found!")
+        print(f"[ALERT] Sound file '{sound_file}' not found!")
 
-def capture_packets():
-    # Modify this based on your desired capture interface or filter
-    capture = pyshark.LiveCapture(interface='wlp2s0')  # Replace with your actual interface
+def get_user_action(ip_address, rule_name, details):
+    print(f"\n[ALERT] Rule Broken: {rule_name}")
+    print(f"[DETAILS] {details}")
+    print(f"[IP] Detected from: {ip_address}\n")
+    print("Choose an action:")
+    print("1. Flag the IP (log only)")
+    print("2. Block the IP")
+    print("3. Do Nothing")
+    choice = input("Enter your choice (1/2/3): ").strip()
 
-    # Loop through packets
-    for packet in capture.sniff_continuously():
-        if hasattr(packet, 'ip'):  # Ensure the packet has IP layer
-            source_ip = packet.ip.src
-            destination_ip = packet.ip.dst
-            description = f"Packet captured: {str(packet)}"  # Use str(packet) instead of packet.summary()
+    if choice == '1':
+        flagged_ips.add(ip_address)
+        logger.info(f"IP {ip_address} flagged for breaking rule: {rule_name}")
+        print(f"[FLAGGED] IP {ip_address} has been flagged.")
+    elif choice == '2':
+        blocked_ips.add(ip_address)
+        logger.info(f"IP {ip_address} blocked for breaking rule: {rule_name}")
+        print(f"[BLOCKED] IP {ip_address} has been blocked.")
+    else:
+        print("[INFO] No action taken.")
 
-            alert_message = (
-                f"Packet captured:\n"
-                f"Source IP: {source_ip}\n"
-                f"Destination IP: {destination_ip}\n"
-                f"Description: {description}"
-            )
+def trigger_alerts(rule_name, ip_address, description, recommended_action="Review the log file."):
+    alert_message = (
+        f"Rule Broken: {rule_name}\n"
+        f"Detected IP: {ip_address}\n"
+        f"Details: {description}\n"
+        f"Recommended Action: {recommended_action}"
+    )
 
-            trigger_alerts(alert_message, source_ip, destination_ip, description)
+    # Show pop-up notification
+    show_notification("Network Security Alert!", alert_message)
+    play_alert_sound()
 
-# Function to trigger alerts based on the user preference
-def trigger_alerts(alert_message, source_ip, destination_ip, description):
-    global user_preference
-
-    current_default = user_preference[0]
-    print(f"Current default option: {current_default}")
-
-    # Trigger alerts based on the user's choice automatically
-    if current_default == 1:
-        show_notification("Alert!", alert_message)
-        play_alert_sound()
-
-    elif current_default == 2:
-        recipient_email = "recipient@example.com"  # You can set this to a fixed email or ask for one
-        email_subject = "Alert Notification"
-        email_body = alert_message
-        
-        show_notification("Alert!", "Notification sent via email.")
-        send_email(email_subject, email_body, recipient_email)
-
-    elif current_default == 3:
-        recipient_email = "recipient@example.com"  # You can set this to a fixed email or ask for one
-        email_subject = "Alert Notification"
-        email_body = alert_message
-        
-        show_notification("Alert!", "Notification sent via email.")
-        play_alert_sound()
-        send_email(email_subject, email_body, recipient_email)
-
-def main():
-    capture_packets()
-
-if __name__ == "__main__":
-    main()
+    # Print to terminal and log details
+    logger.warning(alert_message)
+    get_user_action(ip_address, rule_name, description)

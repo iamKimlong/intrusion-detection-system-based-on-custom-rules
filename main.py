@@ -1,5 +1,6 @@
 import logging
-from ids_system import IDSSystem
+from traffic_monitor import TrafficMonitor
+from rule_engine import RuleEngine
 
 # Configure logging
 logging.basicConfig(
@@ -7,6 +8,19 @@ logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s - %(levelname)s - %(message)s'
 )
+
+class IDSSystem:
+    def __init__(self):
+        self.traffic_monitor = TrafficMonitor()
+        self.rule_engine = RuleEngine()
+
+    def start(self):
+        self.traffic_monitor.start_capture(
+            interface='wlp2s0', capture_filter='ip', max_packets=100
+        )
+
+    def stop(self):
+        self.traffic_monitor.stop()
 
 class MenuHandler:
     def __init__(self):
@@ -24,7 +38,6 @@ class MenuHandler:
     def run(self):
         while True:
             choice = self.display_menu()
-            
             if choice == '1':
                 self.ids_system.start()
                 print("IDS monitoring started...")
@@ -38,11 +51,11 @@ class MenuHandler:
             elif choice == '3':
                 print("\nRecent Alerts:")
                 for alert in self.ids_system.rule_engine.alerting_system.alerts[-5:]:
-                    print(f"- {alert.timestamp}: {alert.alert_type.value} from {alert.source_ip}")
+                    print(f"- {alert.timestamp}: {alert.alert_type.name} from {alert.source_ip}")
                 input("\nPress Enter to continue...")
             elif choice == '4':
                 print("\nSystem Status:")
-                print(f"Monitoring Active: {self.ids_system.traffic_monitor.active}")
+                print(f"Monitoring Active: {not self.ids_system.traffic_monitor.capture_stopped}")
                 print(f"Rules Loaded: {len(self.ids_system.rule_engine.rules)}")
                 print(f"Total Alerts: {len(self.ids_system.rule_engine.alerting_system.alerts)}")
                 input("\nPress Enter to continue...")
