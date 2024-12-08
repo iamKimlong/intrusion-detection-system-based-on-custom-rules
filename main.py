@@ -1,6 +1,6 @@
 import logging
-from traffic_monitor import TrafficMonitor
-from rule_engine import RuleEngine
+from network_traffic_monitor.traffic_monitor import TrafficMonitor
+from rule_engine.rule_engine import RuleEngine
 
 # Configure logging
 logging.basicConfig(
