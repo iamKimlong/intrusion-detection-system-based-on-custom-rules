@@ -2122,3 +2122,6 @@ INFO:root:Packet 97 - Source: 192.168.0.130:45363, Dest: 163.70.148.53:40007, Pr
 INFO:root:Packet 98 - Source: 192.168.0.130:45363, Dest: 163.70.148.53:40007, Protocol: UDP, Length: 84 bytes, Flags: N/A
 INFO:root:Packet 99 - Source: 163.70.148.53:40007, Dest: 192.168.0.130:45363, Protocol: UDP, Length: 127 bytes, Flags: N/A
 INFO:root:Packet 100 - Source: 163.70.148.53:40007, Dest: 192.168.0.130:45363, Protocol: UDP, Length: 1088 bytes, Flags: N/A
+INFO:root:Packet 1 - Source: 192.168.0.130:41616, Dest: 192.168.0.1:53, Protocol: UDP, Length: 78 bytes, Flags: N/A
+INFO:root:Packet 2 - Source: 192.168.0.130:41616, Dest: 192.168.0.1:53, Protocol: UDP, Length: 78 bytes, Flags: N/A
+INFO:root:Custom rule matched for packet from 192.168.0.1
