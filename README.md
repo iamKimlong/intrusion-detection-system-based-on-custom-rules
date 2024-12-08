@@ -21,6 +21,7 @@ A custom Intrusion Detection System (IDS) developed in Python for detecting netw
 - **Menu-Driven Interface**: Allows users to interact with the IDS through a console menu.
 - **Logging**: Logs all activities and alerts to `ids.log`.
 - **Extensibility**: Easily add new detection rules and alerting mechanisms.
+- **Configuration files**: located at ./config/config.py
 
 ## Requirements
 
