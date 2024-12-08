@@ -1,5 +1,3 @@
-# main.py
-
 import logging
 from ids_system import IDSSystem
 
