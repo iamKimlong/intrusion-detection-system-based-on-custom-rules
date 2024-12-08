@@ -4,6 +4,7 @@ from typing import List, Dict
 from models import Alert, AlertType, AlertSeverity, NetworkPacket
 from alerting import AlertingSystem
 
+
 class Rule(ABC):
     def __init__(self, name: str, threshold: int, timeframe: int):
         self.name = name
