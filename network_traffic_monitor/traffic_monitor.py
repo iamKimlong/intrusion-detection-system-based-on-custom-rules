@@ -6,7 +6,8 @@ from datetime import datetime
 from alert_system.alert import trigger_alerts
 
 class TrafficMonitor:
-    def __init__(self, max_packets=100, local_network="192.168.0.0/16"):
+    def __init__(self, interface, max_packets=100, local_network="192.168.0.0/16"):
+        self.interface = interface
         self.packet_count = 0
         self.max_packets = max_packets
         self.capture_stopped = False
@@ -93,11 +94,11 @@ class TrafficMonitor:
             self.capture_stopped = True
             print(f"[INFO] Monitoring stopped. Total packets captured: {self.packet_count}")
 
-    def start_capture(self, interface="wlo1", capture_filter="ip", max_packets=100, verbose=False):
-        # Start the packet capture with default interface if not modified.
+    def start_capture(self, capture_filter="ip", max_packets=100, verbose=False):
+        # Start the packet capture 
         self.max_packets = max_packets
-        capture = pyshark.LiveCapture(interface=interface, display_filter=capture_filter)
-        print(f"[INFO] Starting packet capture on {interface} with filter '{capture_filter}'...")
+        capture = pyshark.LiveCapture(interface=self.interface, display_filter=capture_filter)
+        print(f"[INFO] Starting packet capture on {self.interface} with filter '{capture_filter}'...")
 
         try:
             for packet in capture.sniff_continuously():
