@@ -398,3 +398,25 @@ Traceback (most recent call last):
   File "/home/archuser/Downloads/intrusion-detection-system-based-on-custom-rules/.venv/lib/python3.12/site-packages/pyshark/tshark/output_parser/base_parser.py", line 22, in get_packets_from_stream
     raise EOFError()
 EOFError
+2024-12-09 10:18:09,609 - INFO - Packet #1: Protocol=TCP, Source=140.82.113.26, Destination=192.168.1.7, Length=91 bytes
+2024-12-09 10:18:26,364 - INFO - Packet #2: Protocol=TCP, Source=192.168.1.7, Destination=140.82.113.26, Length=95 bytes
+2024-12-09 10:22:39,194 - INFO - Packet #1: Protocol=TCP, Source=91.108.56.107, Destination=192.168.1.7, Length=66 bytes
+2024-12-09 10:22:40,577 - INFO - Packet #2: Protocol=TCP, Source=91.108.56.107, Destination=192.168.1.7, Length=4442 bytes
+2024-12-09 10:22:41,051 - INFO - Packet #3: Protocol=TCP, Source=91.108.56.107, Destination=192.168.1.7, Length=66 bytes
+2024-12-09 10:22:41,476 - INFO - Packet #4: Protocol=TCP, Source=91.108.56.107, Destination=192.168.1.7, Length=66 bytes
+2024-12-09 10:22:41,784 - INFO - Packet #5: Protocol=TCP, Source=91.108.56.107, Destination=192.168.1.7, Length=443 bytes
+2024-12-09 10:22:42,457 - INFO - Packet #6: Protocol=TCP, Source=91.108.56.107, Destination=192.168.1.7, Length=66 bytes
+2024-12-09 10:22:42,821 - INFO - Packet #7: Protocol=TCP, Source=91.108.56.107, Destination=192.168.1.7, Length=2046 bytes
+2024-12-09 10:22:43,104 - INFO - Packet #8: Protocol=TCP, Source=91.108.56.107, Destination=192.168.1.7, Length=66 bytes
+2024-12-09 10:22:43,389 - INFO - Packet #9: Protocol=TCP, Source=91.108.56.107, Destination=192.168.1.7, Length=2190 bytes
+2024-12-09 10:22:43,679 - INFO - Packet #10: Protocol=TCP, Source=34.107.243.93, Destination=192.168.1.7, Length=66 bytes
+2024-12-09 10:22:44,381 - INFO - Packet #11: Protocol=TCP, Source=91.108.56.107, Destination=192.168.1.7, Length=66 bytes
+2024-12-09 10:29:08,556 - INFO - Packet #52: Protocol=UDP, Source=192.168.1.7, Destination=192.168.1.255, Length=92 bytes
+2024-12-09 10:29:19,380 - INFO - Packet #56: Protocol=UDP, Source=192.168.1.7, Destination=192.168.1.255, Length=92 bytes
+2024-12-09 10:29:24,014 - INFO - Packet #60: Protocol=UDP, Source=192.168.1.7, Destination=192.168.1.255, Length=92 bytes
+2024-12-09 10:29:56,529 - INFO - Packet #62: Protocol=UDP, Source=192.168.1.7, Destination=192.168.1.255, Length=92 bytes
+2024-12-09 10:29:58,090 - INFO - Packet #65: Protocol=UDP, Source=192.168.1.7, Destination=192.168.1.255, Length=92 bytes
+2024-12-09 10:29:58,690 - INFO - Packet #67: Protocol=UDP, Source=192.168.1.7, Destination=192.168.1.255, Length=92 bytes
+2024-12-09 10:29:59,087 - INFO - Packet #70: Protocol=UDP, Source=192.168.1.7, Destination=192.168.1.255, Length=92 bytes
+2024-12-09 10:30:02,146 - INFO - Packet #72: Protocol=UDP, Source=192.168.1.7, Destination=192.168.1.255, Length=92 bytes
+2024-12-09 10:31:41,991 - INFO - Packet #6: Protocol=UDP, Source=192.168.1.7, Destination=192.168.1.255, Length=92 bytes
