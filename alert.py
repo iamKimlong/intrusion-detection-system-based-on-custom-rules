@@ -8,7 +8,6 @@ from playsound import playsound
 from scapy.all import sniff, IP
 import os
 
-
 # Global variable to store user preference (default is option 1 - notification with sound)
 user_preference = [1]  # Default preference is option 1 (notification with sound)
 
