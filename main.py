@@ -59,7 +59,9 @@ class MenuHandler:
             choice = input("Select an option: ").strip()
 
             if choice == '1':
-                verbose = input("Enable verbose mode? (y/n): ").strip().lower() == 'y'
+                # Ensure verbose mode is enabled if input is empty
+                verbose_input = input("Enable verbose mode? (y/n): ").strip().lower()
+                verbose = verbose_input == 'y' or verbose_input == ''
                 self.ids_system.start(verbose=verbose)
                 input("[INFO] Press Enter to stop monitoring...")
                 self.ids_system.stop()

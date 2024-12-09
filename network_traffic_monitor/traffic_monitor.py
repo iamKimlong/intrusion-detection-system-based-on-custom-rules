@@ -6,7 +6,7 @@ from datetime import datetime
 from alert_system.alert import trigger_alerts
 
 class TrafficMonitor:
-    def __init__(self, interface, max_packets=100, local_network="192.168.0.0/16"):
+    def __init__(self, interface, max_packets=10000, local_network="192.168.0.0/16"):
         self.interface = interface
         self.packet_count = 0
         self.max_packets = max_packets
