@@ -4,7 +4,6 @@ import socket
 import ipaddress
 from datetime import datetime
 from alert_system.alert import trigger_alerts
-from main import IDSSystem.start
 
 class TrafficMonitor:
     def __init__(self, max_packets=100, local_network="192.168.0.0/16"):
