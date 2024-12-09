@@ -4,6 +4,7 @@ import socket
 import ipaddress
 from datetime import datetime
 from alert_system.alert import trigger_alerts
+from main import IDSSystem.start
 
 class TrafficMonitor:
     def __init__(self, max_packets=100, local_network="192.168.0.0/16"):
@@ -94,7 +95,7 @@ class TrafficMonitor:
             print(f"[INFO] Monitoring stopped. Total packets captured: {self.packet_count}")
 
     def start_capture(self, interface="wlo1", capture_filter="ip", max_packets=100, verbose=False):
-        # Start the packet capture.
+        # Start the packet capture with default interface if not modified.
         self.max_packets = max_packets
         capture = pyshark.LiveCapture(interface=interface, display_filter=capture_filter)
         print(f"[INFO] Starting packet capture on {interface} with filter '{capture_filter}'...")

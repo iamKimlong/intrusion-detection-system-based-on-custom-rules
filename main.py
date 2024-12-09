@@ -10,17 +10,15 @@ logging.basicConfig(
 )
 
 class IDSSystem:
-    def __init__(self):
+    def __init__(self, interface):
         print("[INFO] Initializing IDS System...")
-        self.traffic_monitor = TrafficMonitor()
+        self.traffic_monitor = TrafficMonitor(interface=interface)
         self.rule_engine = RuleEngine()
         print("[INFO] IDS System initialized successfully.")
 
     def start(self, verbose=False):
-        print(f"\n[INFO] Starting IDS Monitoring in {'Verbose' if verbose else 'Silent'} Mode...")
-        self.traffic_monitor.start_capture(
-            interface='wlo1', capture_filter='ip', max_packets=100, verbose=verbose
-        )
+        print("\n[INFO] Starting IDS Monitoring...")
+        self.traffic_monitor.start_capture(verbose=verbose)
 
     def stop(self):
         print("[INFO] Stopping IDS Monitoring...")
@@ -29,50 +27,43 @@ class IDSSystem:
 
 class MenuHandler:
     def __init__(self):
-        self.ids_system = IDSSystem()
+        self.interface = "wlo1"  # Default interface
+        self.ids_system = None
 
-    def display_menu(self):
-        print("\n[IDS System Menu]")
-        print("1. Start IDS Monitoring")
-        print("2. View Current Rules")
-        print("3. View Recent Alerts")
-        print("4. System Status")
-        print("5. Exit")
-        return input("Select an option: ").strip()
+    def choose_interface(self):
+        print("\nAvailable Network Interfaces (Examples):")
+        print("1. wlo1 (Wi-Fi)")
+        print("2. eth0 (Ethernet)")
+        print("3. Custom Interface")
+        choice = input("Select an option: ").strip()
 
-    def choose_monitoring_mode(self):
-        print("\nChoose Monitoring Mode:")
-        print("1. Verbose Monitoring (Displays Packets in Real-Time)")
-        print("2. Silent Monitoring (No Packet Display)")
-        mode = input("Select an option: ").strip()
-        return mode == '1'
+        if choice == '1':
+            self.interface = "wlo1"
+        elif choice == '2':
+            self.interface = "eth0"
+        elif choice == '3':
+            self.interface = input("Enter your custom interface name: ").strip()
+        else:
+            print("[ERROR] Invalid selection. Using default interface wlo1.")
+            self.interface = "wlo1"
+
+        print(f"[INFO] Using network interface: {self.interface}")
+        self.ids_system = IDSSystem(interface=self.interface)
 
     def run(self):
+        self.choose_interface()
         while True:
-            choice = self.display_menu()
+            print("\n[IDS System Menu]")
+            print("1. Start IDS Monitoring")
+            print("2. Exit")
+            choice = input("Select an option: ").strip()
 
             if choice == '1':
-                verbose = self.choose_monitoring_mode()
+                verbose = input("Enable verbose mode? (y/n): ").strip().lower() == 'y'
                 self.ids_system.start(verbose=verbose)
                 input("[INFO] Press Enter to stop monitoring...")
                 self.ids_system.stop()
             elif choice == '2':
-                print("\n[Active Rules]")
-                for rule in self.ids_system.rule_engine.rules:
-                    print(f"- {rule.name} | Threshold: {rule.threshold}, Timeframe: {rule.timeframe}s")
-                input("\nPress Enter to continue...")
-            elif choice == '3':
-                print("\n[Recent Alerts]")
-                for alert in self.ids_system.rule_engine.alerting_system.alerts[-5:]:
-                    print(f"- {alert.timestamp}: {alert.alert_type.name} from {alert.source_ip}")
-                input("\nPress Enter to continue...")
-            elif choice == '4':
-                print("\n[System Status]")
-                print(f"Monitoring Active: {not self.ids_system.traffic_monitor.capture_stopped}")
-                print(f"Rules Loaded: {len(self.ids_system.rule_engine.rules)}")
-                print(f"Total Alerts: {len(self.ids_system.rule_engine.alerting_system.alerts)}")
-                input("\nPress Enter to continue...")
-            elif choice == '5':
                 print("\n[INFO] Exiting the system. Goodbye!")
                 break
             else:
