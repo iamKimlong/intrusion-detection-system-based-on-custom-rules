@@ -1,5 +1,5 @@
+#alert 
 
-#alert
 import smtplib
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
@@ -14,6 +14,7 @@ user_preference = [1]  # Default preference is option 1 (notification with sound
 def get_user_preference():
     """Getter for user_preference."""
     return user_preference
+    
 
 def set_user_preference(choice):
     """Setter for user_preference."""
@@ -53,7 +54,7 @@ def show_notification(title, message):
 
 # Function to play an alert sound
 def play_alert_sound():
-    sound_file = "C:/Users/Loch Thida/OneDrive/Documents/CADT-YEAR02/TERM1/Python in Cyber/project/intrusion-detection-system-based-on-custom-rules/alert.mp3"
+    sound_file = "C:/Users/Loch Thida/OneDrive/Documents/CADT-YEAR02/TERM1/Python in Cyber/project/intrusion-detection-system-based-on-custom-rules/alert2 (online-audio-converter.com).mp3"
     if os.path.exists(sound_file):
         playsound(sound_file)
     else:
@@ -74,9 +75,29 @@ def capture_traffic():
     packet = sniff(count=1)[0]
     return process_packet(packet)
 
+# Function to count lines in the alert log file
+def count_log_lines(log_file_path):
+    # Ensure the log file exists before counting
+    if not os.path.exists(log_file_path):
+        return 0
+    with open(log_file_path, 'r') as log_file:
+        return len(log_file.readlines())
+
+# Function to create the alert.log file if it doesn't exist (without creating the log folder)
+def ensure_log_file(log_file_path):
+    # Only check if the log file exists, assume the folder is already there
+    if not os.path.exists(log_file_path):
+        with open(log_file_path, 'w') as log_file:
+            log_file.write("")  # Create an empty log file
+
 # Main function
 def main():
     global user_preference
+    log_file_path = "C:/Users/Loch Thida/OneDrive/Documents/CADT-YEAR02/TERM1/Python in Cyber/project/intrusion-detection-system-based-on-custom-rules/logs/alert.log"  # Path to the alert log file
+
+    # Ensure the log file exists
+    ensure_log_file(log_file_path)
+
     # Capture real network data
     source_ip, destination_ip, description = capture_traffic()
 
@@ -89,7 +110,7 @@ def main():
     print("Choose an option:")
     print("1. Show notification and play alert sound")
     print("2. Show notification and send email (no sound)")
-    print("3. Show notification, play alert sound, and send email")
+    print("3. Show notification, play alert sound, and send email (Log info included)")
     
     # Allow user to input choice
     choice = input("Enter your choice (1, 2, or 3, or press Enter to use default): ")
@@ -129,17 +150,20 @@ def main():
     elif choice == '3':
         recipient_email = input("Enter the recipient email address: ")
         email_subject = "Alert Notification"
-        email_body = alert_message
+
+        # Count the number of lines in the log file
+        log_lines_count = count_log_lines(log_file_path)
         
-        show_notification("Alert!", "Notification sent via email.")
+        # Add log info to the email body
+        email_body = (
+            f"{alert_message}\n"
+            f"Log entries in {log_file_path}: {log_lines_count} entries found."
+        )
+        
+        show_notification("Alert!", f"Notification sent via email. Log entries: {log_lines_count}")
         play_alert_sound()
         send_email(email_subject, email_body, recipient_email)
 
 if __name__ == "__main__":
     main()
-
-
-
-
-
 
