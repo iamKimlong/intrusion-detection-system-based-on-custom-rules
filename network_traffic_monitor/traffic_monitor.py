@@ -16,7 +16,7 @@ class TrafficMonitor:
 
         # Configure logging
         logging.basicConfig(
-            filename="traffic_monitor.log",
+            filename="./logs/traffic_monitor.log",
             level=logging.INFO,
             format="%(asctime)s | %(levelname)s | %(message)s",
             datefmt="%Y-%m-%d %H:%M:%S"
@@ -94,9 +94,8 @@ class TrafficMonitor:
             self.capture_stopped = True
             print(f"[INFO] Monitoring stopped. Total packets captured: {self.packet_count}")
 
-    def start_capture(self, capture_filter="ip", max_packets=100, verbose=False):
+    def start_capture(self, capture_filter="ip", verbose=False):
         # Start the packet capture 
-        self.max_packets = max_packets
         capture = pyshark.LiveCapture(interface=self.interface, display_filter=capture_filter)
         print(f"[INFO] Starting packet capture on {self.interface} with filter '{capture_filter}'...")
 

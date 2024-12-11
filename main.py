@@ -33,14 +33,14 @@ class MenuHandler:
     def choose_interface(self):
         print("\nAvailable Network Interfaces (Examples):")
         print("1. wlo1 (Wi-Fi)")
-        print("2. eth0 (Ethernet)")
+        print("2. enp3s0 (Ethernet)")
         print("3. Custom Interface")
         choice = input("Select an option: ").strip()
 
         if choice == '1':
             self.interface = "wlo1"
         elif choice == '2':
-            self.interface = "eth0"
+            self.interface = "enp3s0"
         elif choice == '3':
             self.interface = input("Enter your custom interface name: ").strip()
         else:
