@@ -1,6 +1,5 @@
 import logging
 from network_traffic_monitor.traffic_monitor import TrafficMonitor
-from rule_engine.rule_engine import RuleEngine
 
 # Configure logging
 logging.basicConfig(
@@ -13,7 +12,6 @@ class IDSSystem:
     def __init__(self, interface):
         print("[INFO] Initializing IDS System...")
         self.traffic_monitor = TrafficMonitor(interface=interface)
-        self.rule_engine = RuleEngine()
         print("[INFO] IDS System initialized successfully.")
 
     def start(self, verbose=False):
