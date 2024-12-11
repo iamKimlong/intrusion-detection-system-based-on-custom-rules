@@ -21,7 +21,7 @@ def set_user_preference(choice):
         user_preference[0] = choice
 
 # Configure logging
-logger.add("/log/alerts.log", format="{time} {level} {message}", level="INFO")
+logger.add("logs/alerts.log", format="{time} {level} {message}", level="INFO")
 
 # User action storage
 flagged_ips = set()

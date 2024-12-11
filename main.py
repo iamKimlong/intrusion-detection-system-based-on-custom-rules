@@ -4,7 +4,7 @@ from rule_engine.rule_engine import RuleEngine
 
 # Configure logging
 logging.basicConfig(
-    filename='./Downloads/intrusion-detection-system-based-on-custom-rules/logs/ids.log',
+    filename='./logs/ids.log',
     level=logging.INFO,
     format='%(asctime)s - %(levelname)s - %(message)s'
 )
