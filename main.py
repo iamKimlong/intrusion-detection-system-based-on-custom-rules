@@ -3,7 +3,7 @@ from network_traffic_monitor.traffic_monitor import TrafficMonitor
 
 # Configure logging
 logging.basicConfig(
-    filename='./logs/ids.log',
+    filename='ids.log',
     level=logging.INFO,
     format='%(asctime)s - %(levelname)s - %(message)s'
 )

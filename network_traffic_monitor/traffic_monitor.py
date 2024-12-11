@@ -7,17 +7,51 @@ from datetime import datetime
 from alert_system.alert import trigger_alerts
 
 class RuleEngine:
-    def __init__(self, packet_threshold=10, time_window=60):
+    known_good_external_ips = {
+        "8.8.8.8",    # Google DNS Server
+        "8.8.4.4",    # Google Secondary DNS
+        "1.1.1.1",    # Cloudflare DNS Server
+        "1.0.0.1",    # Cloudflare Secondary DNS
+        "74.125.130.136",  # Google Search/Services
+        "142.250.191.174",  # Google API Services
+        "172.217.16.196",  # Google Cloud Services
+        "34.102.136.180",  # Google Web Services
+        "163.70.148.13",  # External Service (Example from log)
+        "36.37.218.17",  # Example IP from log (External Provider)
+        "175.100.94.146",  # Another Service Provider (Example)
+        "13.35.89.44",  # AWS Global Accelerator
+        "52.94.237.0",  # AWS API Gateway
+        "13.107.42.14",  # Microsoft Azure Endpoint
+        "20.189.173.0",  # Microsoft Office 365 Services
+        "17.57.146.100",  # Apple iCloud Services
+        "17.253.144.10",  # Apple Services Endpoint
+        "199.16.156.198",  # Twitter API Services
+        "185.199.108.153",  # GitHub Global Network
+        "52.58.78.16",  # AWS Elastic Load Balancer
+        "104.26.11.78",  # Cloudflare Proxy Server
+        "104.26.10.78",  # Cloudflare Backup Proxy
+        "192.30.255.112",  # GitHub Server IP
+        "185.60.216.35",  # Facebook Services
+        "157.240.22.35",  # Facebook API Endpoint
+        "172.67.13.78",  # Cloudflare Host IP
+        "192.229.173.43",  # Akamai CDN
+        "151.101.1.69",  # Fastly CDN (Common for APIs)
+        "13.107.6.158",  # Skype Services
+        "204.79.197.200",  # Bing Search Services
+        "172.217.164.110",  # Google Web Cache
+        "31.13.64.35",  # Facebook Messenger
+        "157.240.221.35",  # Facebook Chat API
+        "40.101.76.17",  # Microsoft 365 Email Services
+        "64.233.187.99",  # Google Mail Servers
+        "172.253.115.189",  # Google Ads Serversa
+        "84.17.57.98", # CDN services used to distribute web content efficiently
+    }
+
+    def __init__(self, packet_threshold=10, time_window=30): # default scope
         self.packet_threshold = packet_threshold
         self.time_window = time_window
         self.ip_activity = {}
-        self.known_good_external_ips = {
-            "8.8.8.8", # Add more known-good hosts here
-            "8.8.4.4", 
-            "74.125.130.136", 
-            "163.70.148.13", 
-            "36.37.218.17",         
-        }
+
 
     def register_packet(self, src_ip, dst_ip, is_external_src, is_external_dst):
         current_time = time.time()
@@ -34,9 +68,9 @@ class RuleEngine:
     def check_rules(self, src_ip, dst_ip, is_external_src, is_external_dst):
         if is_external_src or is_external_dst:
             if dst_ip in self.known_good_external_ips or src_ip in self.known_good_external_ips:
-                threshold = self.packet_threshold * 100  # Highly relaxed threshold for known-good hosts
+                threshold = self.packet_threshold * 1000  # Highly relaxed threshold for known good hosts
             else:
-                threshold = self.packet_threshold * 3   # Stricter threshold for unknown hosts
+                threshold = self.packet_threshold * 1   # Stricter threshold for unknown hosts
         else:
             threshold = self.packet_threshold
 
@@ -46,14 +80,14 @@ class RuleEngine:
         return False
 
 class TrafficMonitor:
-    def __init__(self, interface, max_packets=10000, local_network="192.168.0.0/16"):
+    def __init__(self, interface, max_packets=10000, local_network="192.168.0.0/24"):
         self.interface = interface
         self.packet_count = 0
         self.max_packets = max_packets
         self.capture_stopped = False
         self.local_ip = self.get_local_ip()
         self.local_network = ipaddress.ip_network(local_network)
-        self.rule_engine = RuleEngine(packet_threshold=5, time_window=30)
+        self.rule_engine = RuleEngine(packet_threshold=10, time_window=30)
 
         # Configure logging
         logging.basicConfig(
@@ -88,11 +122,11 @@ class TrafficMonitor:
             length = packet.length if hasattr(packet, 'length') else "N/A"
 
             summary = (
-                f"Packet #{self.packet_count}: "
-                f"Protocol={protocol}, "
-                f"Source={src_ip}, "
-                f"Destination={dst_ip}, "
-                f"Length={length} bytes"
+                f"Packet #{self.packet_count} |"
+                f" Protocol={protocol} |"
+                f" Source={src_ip} |"
+                f" Destination={dst_ip} |"
+                f" Length={length} bytes"
             )
             return summary
         except Exception as e:
@@ -122,7 +156,7 @@ class TrafficMonitor:
             logging.info(summary)
 
             if verbose:
-                print(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] {summary}")
+                print(f"[IGNORED] [{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] {summary}")
 
             self.analyze_packet(packet)
 

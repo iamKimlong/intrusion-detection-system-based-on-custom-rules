@@ -21,7 +21,7 @@ def set_user_preference(choice):
         user_preference[0] = choice
 
 # Configure logging
-logger.add("logs/alerts.log", format="{time} {level} {message}", level="INFO")
+logger.add("./logs/alerts.log", format="{time} {level} {message}", level="INFO")
 
 # User action storage
 flagged_ips = set()
@@ -76,7 +76,10 @@ def get_user_action(ip_address, rule_name, details):
         logger.info(f"IP {ip_address} flagged for breaking rule: {rule_name}")
         print(f"[FLAGGED] IP {ip_address} has been flagged.")
     elif choice == '2':
+        from network_traffic_monitor.traffic_monitor import RuleEngine # Avoid circular module calling
         blocked_ips.add(ip_address)
+        RuleEngine().known_good_external_ips.add(ip_address) # Currently this block function just adds the IP to the ignore list
+        # print(RuleEngine().known_good_external_ips)
         logger.info(f"IP {ip_address} blocked for breaking rule: {rule_name}")
         print(f"[BLOCKED] IP {ip_address} has been blocked.")
     else:
