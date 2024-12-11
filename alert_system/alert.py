@@ -1,5 +1,5 @@
-from loguru import logger
 import smtplib
+from loguru import logger
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 from plyer import notification
@@ -20,8 +20,18 @@ def set_user_preference(choice):
     if choice in [1, 2, 3]:
         user_preference[0] = choice
 
+# Ensure the logs directory exists
+# log_dir = os.path.join(os.path.dirname(__file__), "logs")
+
+# Ensure the logs directory exists one level up
+log_dir = os.path.join(os.path.dirname(os.path.dirname(__file__)), "logs")
+os.makedirs(log_dir, exist_ok=True)
+
+# Configure the logger with an absolute path
+log_file = os.path.join(log_dir, "alerts.log")
+
 # Configure logging
-logger.add("./logs/alerts.log", format="{time} {level} {message}", level="INFO")
+logger.add(log_file, format="{time} {level} {message}", level="INFO")
 
 # User action storage
 flagged_ips = set()

@@ -3,6 +3,7 @@ import pyshark
 import socket
 import ipaddress
 import time
+import os
 from datetime import datetime
 from alert_system.alert import trigger_alerts
 
@@ -92,9 +93,17 @@ class TrafficMonitor:
         self.local_network = ipaddress.ip_network(local_network)
         self.rule_engine = RuleEngine(packet_threshold=10, time_window=30)
 
+        # Ensure the logs directory exists
+        # log_dir = os.path.join(os.path.dirname(__file__), "logs")
+
+        # Ensure the logs directory exists one level up
+        log_dir = os.path.join(os.path.dirname(os.path.dirname(__file__)), "logs")
+        os.makedirs(log_dir, exist_ok=True)
+
         # Configure logging
+        log_file = os.path.join(log_dir, "ids.log")
         logging.basicConfig(
-            filename="./logs/traffic_monitor.log",
+            filename=log_file,
             level=logging.INFO,
             format="%(asctime)s | %(levelname)s | %(message)s",
             datefmt="%Y-%m-%d %H:%M:%S"

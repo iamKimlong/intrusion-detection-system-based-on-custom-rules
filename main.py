@@ -1,11 +1,17 @@
 import logging
+import os
 from network_traffic_monitor.traffic_monitor import TrafficMonitor
 
+# Ensure the logs directory exists
+log_dir = os.path.join(os.path.dirname(__file__), "logs")
+os.makedirs(log_dir, exist_ok=True)
+
 # Configure logging
+log_file = os.path.join(log_dir, "ids.log")
 logging.basicConfig(
-    filename='ids.log',
+    filename=log_file,
     level=logging.INFO,
-    format='%(asctime)s - %(levelname)s - %(message)s'
+    format="%(asctime)s | %(levelname)s | %(message)s",
 )
 
 class IDSSystem:
