@@ -45,6 +45,9 @@ class RuleEngine:
         "64.233.187.99",  # Google Mail Servers
         "172.253.115.189",  # Google Ads Serversa
         "84.17.57.98", # CDN services used to distribute web content efficiently
+        "163.70.149.15", # External Service
+        "74.125.68.91", # External Service
+
     }
 
     def __init__(self, packet_threshold=10, time_window=30): # default scope
