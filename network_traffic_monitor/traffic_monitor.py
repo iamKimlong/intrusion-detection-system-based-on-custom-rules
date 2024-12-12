@@ -150,10 +150,11 @@ class TrafficMonitor:
         except Exception as e:
             return f"[ERROR] Failed to summarize packet: {e}"
 
+
     def analyze_packet(self, packet):
-        if hasattr(packet, 'ip'):
-            src_ip = packet.ip.src
-            dst_ip = packet.ip.dst
+        if hasattr(packet, 'ip') or hasattr(packet, 'icmp') or hasattr(packet, 'igmp') or hasattr(packet, 'tcp') or hasattr(packet, 'udp') or hasattr(packet, 'arp') or hasattr(packet, 'dns'):
+            src_ip = packet.ip.src if hasattr(packet, 'ip') else "N/A"
+            dst_ip = packet.ip.dst if hasattr(packet, 'ip') else "N/A"
             is_external_src = self.is_external_ip(src_ip)
             is_external_dst = self.is_external_ip(dst_ip)
 
