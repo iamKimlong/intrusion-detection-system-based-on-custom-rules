@@ -44,11 +44,17 @@ class RuleEngine:
         "157.240.221.35",  # Facebook Chat API
         "40.101.76.17",  # Microsoft 365 Email Services
         "64.233.187.99",  # Google Mail Servers
-        "172.253.115.189",  # Google Ads Serversa
+        "172.253.115.189",  # Google Ads Servers
         "84.17.57.98", # CDN services used to distribute web content efficiently
         "163.70.149.15", # External Service
         "74.125.68.91", # External Service
-
+        "91.108.56.107", # External Service
+        "203.0.113.5",  # Example Test IP
+        "192.88.99.1",  # Deprecated Anycast IP
+        "198.51.100.1",  # Test Network IP
+        "45.33.32.156",  # Linode Server Example
+        "104.131.114.102",  # DigitalOcean Example
+        "207.154.239.48"  # Custom Service IP
     }
 
     def __init__(self, packet_threshold=10, time_window=30): # default scope

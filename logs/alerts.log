@@ -1,0 +1,8 @@
+2024-12-12T10:10:22.510900+0700 WARNING Rule Broken: Suspicious Activity Detected
+Detected IP: 91.108.56.107
+Details: Unusual traffic pattern involving 91.108.56.107 -> 192.168.100.89
+Recommended Action: Review the log file.
+2024-12-12T10:12:20.595030+0700 WARNING Rule Broken: Suspicious Activity Detected
+Detected IP: 192.168.100.89
+Details: Unusual traffic pattern involving 192.168.100.89 -> 224.0.0.22
+Recommended Action: Review the log file.
