@@ -37,9 +37,9 @@ logger.add(log_file, format="{time} {level} {message}", level="INFO")
 flagged_ips = set()
 blocked_ips = set()
 
-def send_email(subject, body, recipient_email="recipient@example.com"):
-    sender_email = "chhuonnara002@gmail.com"
-    app_password = "cnfv uqii avuq anij"
+def send_email(subject, body, recipient_email="chhounnara002@gmail.com"):
+    sender_email = "user28379362@gmail.com"  # Change this to your email
+    app_password = "bhhi xspb wyds shiw"  # Use your Gmail app password
 
     msg = MIMEMultipart()
     msg['From'] = sender_email
@@ -65,7 +65,11 @@ def show_notification(title, message):
     )
 
 def play_alert_sound():
-    sound_file = "alert.mp3"
+    # Go to the base directory by going one level up
+    base_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
+    alert_dir = os.path.join(base_dir, "alert_system")
+    sound_file = os.path.join(alert_dir, "alert.mp3")
+    
     if os.path.exists(sound_file):
         playsound(sound_file)
     else:
@@ -97,7 +101,7 @@ def get_user_action(ip_address, rule_name, details):
 
 def trigger_alerts(rule_name, ip_address, description, recommended_action="Review the log file."):
     alert_message = (
-        f"Rule Broken: {rule_name}\n"
+        f"\nRule Broken: {rule_name}\n"
         f"Detected IP: {ip_address}\n"
         f"Details: {description}\n"
         f"Recommended Action: {recommended_action}"

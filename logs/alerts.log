@@ -18,3 +18,37 @@ Recommended Action: Review the log file.
 Detected IP: 192.168.100.114
 Details: Unusual traffic pattern involving 192.168.100.114 -> 224.0.0.22
 Recommended Action: Review the log file.
+2024-12-12T11:20:40.605845+0700 WARNING Rule Broken: Suspicious Activity Detected
+Detected IP: 192.168.100.89
+Details: Unusual traffic pattern involving 192.168.100.89 -> 192.168.100.1
+Recommended Action: Review the log file.
+2024-12-12T11:23:18.197138+0700 WARNING 
+Rule Broken: Suspicious Activity Detected
+Detected IP: 192.168.100.89
+Details: Unusual traffic pattern involving 192.168.100.89 -> 224.0.0.22
+Recommended Action: Review the log file.
+2024-12-12T11:25:22.582094+0700 WARNING 
+Rule Broken: Suspicious Activity Detected
+Detected IP: 192.168.100.89
+Details: Unusual traffic pattern involving 192.168.100.89 -> 224.0.0.22
+Recommended Action: Review the log file.
+2024-12-12T11:27:29.687961+0700 WARNING 
+Rule Broken: Suspicious Activity Detected
+Detected IP: 192.168.100.89
+Details: Unusual traffic pattern involving 192.168.100.89 -> 224.0.0.251
+Recommended Action: Review the log file.
+2024-12-12T11:28:12.905604+0700 WARNING 
+Rule Broken: Suspicious Activity Detected
+Detected IP: 192.168.100.89
+Details: Unusual traffic pattern involving 192.168.100.89 -> 224.0.0.22
+Recommended Action: Review the log file.
+2024-12-12T11:29:20.985834+0700 WARNING 
+Rule Broken: Suspicious Activity Detected
+Detected IP: 192.168.100.89
+Details: Unusual traffic pattern involving 192.168.100.89 -> 224.0.0.22
+Recommended Action: Review the log file.
+2024-12-12T11:29:21.007371+0700 WARNING 
+Rule Broken: Suspicious Activity Detected
+Detected IP: 192.168.100.89
+Details: Unusual traffic pattern involving 192.168.100.89 -> 224.0.0.22
+Recommended Action: Review the log file.
