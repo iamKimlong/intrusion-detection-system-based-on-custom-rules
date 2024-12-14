@@ -57,7 +57,7 @@ class RuleEngine:
         "207.154.239.48"  # Custom Service IP
     }
 
-    def __init__(self, packet_threshold=10, time_window=30): # default scope
+    def __init__(self, packet_threshold=10, time_window=60): # default scope
         self.packet_threshold = packet_threshold
         self.time_window = time_window
         self.ip_activity = {}
@@ -97,7 +97,7 @@ class TrafficMonitor:
         self.capture_stopped = False
         self.local_ip = self.get_local_ip()
         self.local_network = ipaddress.ip_network(local_network)
-        self.rule_engine = RuleEngine(packet_threshold=10, time_window=30)
+        self.rule_engine = RuleEngine(packet_threshold=10, time_window=60)
 
         # Ensure the logs directory exists
         # log_dir = os.path.join(os.path.dirname(__file__), "logs")
