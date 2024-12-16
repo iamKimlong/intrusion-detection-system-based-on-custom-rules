@@ -3,34 +3,27 @@ from loguru import logger
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 from plyer import notification
-from playsound import playsound
+import platform
+import subprocess
 import os
 import pyshark  # Import PyShark for packet capturing
 
-    
 # Global variable to store user preference 
 user_preference = [1]  # Default preference is option 1 (notification with sound)
 
 def get_user_preference():
-    # Getter for user's preference
     return user_preference
 
 def set_user_preference(choice):
-    # Setter for user's preference
     if choice in [1, 2, 3]:
         user_preference[0] = choice
 
 # Ensure the logs directory exists
-# log_dir = os.path.join(os.path.dirname(__file__), "logs")
-
-# Ensure the logs directory exists one level up
 log_dir = os.path.join(os.path.dirname(os.path.dirname(__file__)), "logs")
 os.makedirs(log_dir, exist_ok=True)
 
 # Configure the logger with an absolute path
 log_file = os.path.join(log_dir, "alerts.log")
-
-# Configure logging
 logger.add(log_file, format="{time} {level} {message}", level="INFO")
 
 # User action storage
@@ -58,20 +51,32 @@ def send_email(subject, body, recipient_email="chhounnara002@gmail.com"):
         print(f"[ERROR] Failed to send email: {e}")
 
 def show_notification(title, message):
-    notification.notify(
-        title=title,
-        message=message,
-        timeout=20
-    )
+    if platform.system() == "Linux":
+        try:
+            subprocess.run(["notify-send", "--expire-time=10000", "--urgency=critical", title, message], check=True)
+        except subprocess.CalledProcessError as e:
+            print(f"[ERROR] Notification failed: {e}")
+    else:
+        notification.notify(
+            title=title,
+            message=message,
+            timeout=20
+        )
 
 def play_alert_sound():
-    # Go to the base directory by going one level up
     base_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
     alert_dir = os.path.join(base_dir, "alert_system")
     sound_file = os.path.join(alert_dir, "alert.mp3")
-    
+
     if os.path.exists(sound_file):
-        playsound(sound_file)
+        if platform.system() == "Linux":
+            try:
+                subprocess.run(["paplay", sound_file], check=True)
+            except subprocess.CalledProcessError as e:
+                print(f"[ERROR] Sound playback failed: {e}")
+        else:
+            from playsound import playsound
+            playsound(sound_file)
     else:
         print(f"[ALERT] Sound file '{sound_file}' not found!")
 
@@ -90,10 +95,9 @@ def get_user_action(ip_address, rule_name, details):
         logger.info(f"IP {ip_address} flagged for breaking rule: {rule_name}")
         print(f"[FLAGGED] IP {ip_address} has been flagged.")
     elif choice == '2':
-        from network_traffic_monitor.traffic_monitor import RuleEngine # Avoid circular module calling
+        from network_traffic_monitor.traffic_monitor import RuleEngine  # Avoid circular module calling
         blocked_ips.add(ip_address)
-        RuleEngine().known_good_external_ips.add(ip_address) # Currently this block function just adds the IP to the ignore list
-        # print(RuleEngine().known_good_external_ips)
+        RuleEngine().known_good_external_ips.add(ip_address)  # Currently, this block function just adds the IP to the ignore list
         logger.info(f"IP {ip_address} blocked for breaking rule: {rule_name}")
         print(f"[BLOCKED] IP {ip_address} has been blocked.")
     else:
@@ -107,10 +111,7 @@ def trigger_alerts(rule_name, ip_address, description, recommended_action="Revie
         f"Recommended Action: {recommended_action}"
     )
 
-    # Show pop-up notification
+    logger.warning(alert_message)
     show_notification("Network Security Alert!", alert_message)
     play_alert_sound()
-
-    # Print to terminal and log details
-    logger.warning(alert_message)
     get_user_action(ip_address, rule_name, description)
