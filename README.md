@@ -2,17 +2,6 @@
 
 A custom Intrusion Detection System (IDS) developed in Python for detecting network intrusions such as port scans, DDoS attacks, brute-force attempts, and DoS attacks. This IDS provides real-time monitoring, alerting, and logging capabilities, allowing administrators to identify and respond to potential threats effectively.
 
-## Table of Contents
-
-- [Features](#features)
-- [Requirements](#requirements)
-- [Installation](#installation)
-- [Configuration](#configuration)
-- [Usage](#usage)
-- [Testing the IDS](#testing-the-ids)
-- [Modules Overview](#modules-overview)
-- [License](#license)
-
 ## Features
 
 - **Real-time Packet Sniffing**: Captures network packets using Scapy.
