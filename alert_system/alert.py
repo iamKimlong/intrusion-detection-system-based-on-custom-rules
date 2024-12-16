@@ -6,7 +6,6 @@ from plyer import notification
 import platform
 import subprocess
 import os
-import pyshark  # Import PyShark for packet capturing
 
 # Global variable to store user preference 
 user_preference = [1]  # Default preference is option 1 (notification with sound)
