@@ -35,7 +35,7 @@ class MenuHandler:
         self.ids_system = None
 
     def choose_interface(self):
-        print("\nAvailable Network Interfaces (Examples):")
+        print("\nAvailable Network Interfaces:")
         print("1. wlo1 (Wi-Fi)")
         print("2. enp3s0 (Ethernet)")
         print("3. Custom Interface")
