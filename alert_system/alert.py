@@ -72,6 +72,8 @@ def play_alert_sound():
         if platform.system() == "Linux":
             try:
                 subprocess.run(["paplay", sound_file], check=True)
+            except FileNotFoundError:
+                print("[ERROR] 'paplay' not found. Check PulseAudio installation.")
             except subprocess.CalledProcessError as e:
                 print(f"[ERROR] Sound playback failed: {e}")
         else:
