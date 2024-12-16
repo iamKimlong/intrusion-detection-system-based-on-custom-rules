@@ -28,14 +28,14 @@ A custom Intrusion Detection System (IDS) developed in Python for detecting netw
 
 2. **Install Required Libraries**
 
-# installing pip for python packages on windows
+Installing pip for python packages on windows
 `Invoke-WebRequest -Uri https://bootstrap.pypa.io/get-pip.py -OutFile get-pip.py`
-`py get-pip.py` # py or python or python3...etc
+`py get-pip.py` py or python or python3...etc
 
-# installing pip for python packages for linux
-`sudo pacman -S python-pip` # for arch linux, other OS' tend to be similar
+Installing pip for python packages for linux
+`sudo pacman -S python-pip` for arch linux, other OS' tend to be similar
 
-# run this after
+Run this after
 `pip install ––upgrade setup-tools wheel pip`
 `pip install loguru plyer playsound pyshark`
 
