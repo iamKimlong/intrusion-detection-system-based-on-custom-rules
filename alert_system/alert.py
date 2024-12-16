@@ -30,7 +30,7 @@ logger.add(log_file, format="{time} {level} {message}", level="INFO")
 flagged_ips = set()
 blocked_ips = set()
 
-def send_email(subject, body, recipient_email="chhounnara002@gmail.com"):
+def send_email(subject, body, recipient_email="chhuonnara002@gmail.com"):
     sender_email = "user28379362@gmail.com"  # Change this to your email
     app_password = "bhhi xspb wyds shiw"  # Use your Gmail app password
 
@@ -116,4 +116,10 @@ def trigger_alerts(rule_name, ip_address, description, recommended_action="Revie
     logger.warning(alert_message)
     show_notification("Network Security Alert!", alert_message)
     play_alert_sound()
+
+    send_email(
+        subject="Security Alert: Intrusion Detected",
+        body="A suspicious activity was detected on your network. Please review the logs for more details.",
+        recipient_email="chhuonnara002@gmail.com"
+    )    
     get_user_action(ip_address, rule_name, description)
